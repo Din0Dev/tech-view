@@ -9,7 +9,7 @@ const propTypes = {};
 
 const LoginPage = (props) => {
   //! State
-  const authReducer = useSelector(state => state.authReducer);
+  const authReducer = useSelector((state) => state.authReducer);
   const dispatch = useDispatch();
   const router = useRouter();
 
@@ -17,7 +17,7 @@ const LoginPage = (props) => {
 
   //! Function
   if (isLogin) {
-    router.push('/');
+    router.push("/");
     return null;
   }
 
@@ -27,13 +27,15 @@ const LoginPage = (props) => {
       <Formik
         initialValues={{}}
         onSubmit={(values) => {
-          dispatch(login({
-            username: values.username,
-            password: values.password
-          }));
+          dispatch(
+            login({
+              username: values.username,
+              password: values.password,
+            })
+          );
         }}
       >
-        {propsFormik => (
+        {(propsFormik) => (
           <Form>
             <FormGroup>
               <Label for="exampleEmail">Email</Label>
@@ -41,7 +43,7 @@ const LoginPage = (props) => {
                 name="email"
                 id="exampleEmail"
                 placeholder="with a placeholder"
-                onChange={propsFormik.handleChange('username')}
+                onChange={propsFormik.handleChange("username")}
               />
             </FormGroup>
             <FormGroup>
@@ -51,16 +53,14 @@ const LoginPage = (props) => {
                 name="password"
                 id="examplePassword"
                 placeholder="password placeholder"
-                onChange={propsFormik.handleChange('password')}
+                onChange={propsFormik.handleChange("password")}
               />
             </FormGroup>
-            <Button type="submit">
-              Submit
-            </Button>
+            <Button type="submit">Submit</Button>
           </Form>
         )}
       </Formik>
-
+      {/*  */}
     </div>
   );
 };
