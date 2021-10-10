@@ -1,0 +1,38 @@
+.section-preview {
+  .section-preview-left {
+    background: $white-color;
+    .section-preview-inner-left {
+      padding-left: 30px !important;
+      .section-preview-inner-left-top {
+        .ant-card-meta-title {
+          font-weight: bold;
+          font-size: 40px;
+        }
+      }
+      .section-preview-inner-left-bottom {
+        .section-preview-inner-left-bottom-inner-left {
+          padding-right: 15px;
+          border: none;
+        }
+        .section-preview-inner-left-bottom-inner-right {
+          padding-left: 15px;
+          border: none;
+        }
+      }
+    }
+    .section-preview-inner-right {
+      padding-right: 30px !important;
+    }
+
+    > div {
+      padding: 30px 0;
+    }
+  }
+  .section-preview-right {
+    margin: 0 15px;
+    background: $white-color;
+    > div {
+      padding: 0 30px;
+    }
+  }
+}

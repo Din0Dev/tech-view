@@ -1,0 +1,24 @@
+.section-video-custom {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  .section-video-scrollbar {
+    height: 500px;
+    scrollbar-width: thin;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $grey-sencondary-color;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: $grey-color;
+    }
+  }
+}

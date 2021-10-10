@@ -1,0 +1,34 @@
+$main-color: rgba(32, 168, 216, 1);
+$progress-color: #004989;
+//
+$brand-color: #004989;
+$brand-sencondary-color: #638bc6;
+//
+$state-blue-color: #73bfe0;
+$state-green-color: #6bbe66;
+$state-orange-color: #f58c2b;
+$state-red-color: #e71c1c;
+//
+$backround-color: #F6F6F6;
+$black-color: #121212;
+$white-color: #fff;
+$white-sencondary-color: #fbfbfb;
+$grey-color: #8a8a8a;
+$grey-sencondary-color: #d9d9d9;
+//
+@font-face {
+  font-family: BeVietNam;
+  src: url("/static/assets/font/BeVietnam-Regular.ttf");
+}
+@font-face {
+  font-family: BeVietNamBold;
+  src: url("/static/assets/font/BeVietnam-Bold.ttf");
+}
+@font-face {
+  font-family: BeVietNamItalic;
+  src: url("/static/assets/font/BeVietnam-Italic.ttf");
+}
+// FONTSIZE
+$fz30: 30px;
+$fz20: 20px;
+$fz16: 16px;
