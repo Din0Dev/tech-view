@@ -34,3 +34,4 @@ Just make sure that you reboot the server when updating .env file
 
 - Upgrade Nextjs 9.3.
 - Restructure Redux folder. 
+"# tech-view" 
