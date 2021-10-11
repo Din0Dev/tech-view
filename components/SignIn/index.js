@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import { Col, Row } from "antd";
 import FormSign from "components/FormSign";
-
+import Link from "next/link";
 const propTypes = {};
 
 const SignIn = (props) => {
@@ -16,10 +16,12 @@ const SignIn = (props) => {
   return (
     <div className="sign-in">
       <Row>
-        <Col span={12}>
-          <img src="/static/assets/img/tech-view_logo_white.png" />
+        <Col className="sign-in-img" span={8}>
+          <Link href="/">
+            <img src="/static/assets/img/tech-view_logo_white.png" />
+          </Link>
         </Col>
-        <Col span={12}>
+        <Col className="sign-in-form" span={16}>
           <FormSign label="Đăng nhập" />
         </Col>
       </Row>

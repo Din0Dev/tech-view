@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Title from "components/Title";
 import TitleDeliver from "components/TitleDeliver";
-import { Form, Input, Button } from "antd";
+import { Form, Input, Button, Modal, message } from "antd";
+import Link from "next/link";
+import router from "next/router";
 
 const propTypes = {
   label: PropTypes.string,
 };
 
 const FormSign = (props) => {
-  const { label = "FORM" } = props;
+  const { label = "FORM", isSignUp = false } = props;
   //! State
   const validateMessages = {
     required: "${label} is required!",
@@ -21,23 +23,76 @@ const FormSign = (props) => {
       range: "${label} must be between ${min} and ${max}",
     },
   };
+  const key = "updatable";
   const onFinish = (values) => {
-    console.log(values);
+    message.loading({ content: "Đang kiểm tra...", key });
+    setTimeout(() => {
+      message.success({ content: "Đăng nhập thành công!", key, duration: 2 });
+      setTimeout(() => {
+        router.push("/");
+      }, 1000);
+    }, 1000);
+  };
+
+  //
+  const [visible, setVisible] = useState(false);
+  const [confirmLoading, setConfirmLoading] = useState(false);
+  const [modalText, setModalText] = useState("Bạn chắc chắn muốn đăng ký ?");
+
+  const showModal = () => {
+    setVisible(true);
+  };
+
+  const handleOk = () => {
+    setModalText("Đăng ký thành công, vui lòng đợi...");
+    setConfirmLoading(true);
+    setTimeout(() => {
+      setVisible(false);
+      setConfirmLoading(false);
+      setTimeout(() => {
+        router.push("/");
+      }, 1000);
+    }, 2000);
+  };
+
+  const handleCancel = () => {
+    setVisible(false);
   };
   //! Function
 
   //! Render
   return (
     <div className="form-sign">
+      <Modal
+        title="Thông Báo"
+        visible={visible}
+        onOk={handleOk}
+        confirmLoading={confirmLoading}
+        onCancel={handleCancel}
+      >
+        <p>{modalText}</p>
+      </Modal>
       <Title label={label} />
       <div className="form-login-social">
-        <Button>
-          <img src="/static/assets/img/icon/google.svg" /> Tiếp tục với Google
-        </Button>
-        <Button>
-          <img src="/static/assets/img/icon/facebook.svg" />
-          Tiếp tục với Facebook
-        </Button>
+        <a
+          href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Button>
+            <img src="/static/assets/img/icon/google.svg" /> Tiếp tục với Google
+          </Button>
+        </a>
+        <a
+          href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Button>
+            <img src="/static/assets/img/icon/facebook.svg" />
+            Tiếp tục với Facebook
+          </Button>
+        </a>
         <div className="form-login-social-or">
           <TitleDeliver orientation="center" label="hoặc" />
         </div>
@@ -51,29 +106,55 @@ const FormSign = (props) => {
             validateMessages={validateMessages}
             autoComplete="off"
           >
+            {isSignUp && (
+              <Form.Item
+                className="form-input-custom"
+                name="username"
+                rules={[
+                  { required: true, message: "Please input your username!" },
+                ]}
+              >
+                <Input className="input-field" placeholder="Họ và tên" />
+              </Form.Item>
+            )}
             <Form.Item
-              name={["user", "email"]}
-              label="Email"
+              className="form-input-custom"
+              name={["email"]}
               rules={[{ type: "email" }]}
             >
-              <Input />
+              <Input className="input-field" placeholder="Email" />
             </Form.Item>
 
             <Form.Item
+              className="form-input-custom"
               name="password"
               rules={[
                 { required: true, message: "Please input your password!" },
               ]}
             >
-              <Input.Password />
+              <Input.Password className="input-field" placeholder="Password" />
             </Form.Item>
 
-            <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-              <Button type="primary" htmlType="submit">
+            <Form.Item
+              className="button-submit"
+              wrapperCol={{ offset: 8, span: 16 }}
+            >
+              <Button type="primary" onClick={isSignUp ? showModal : onFinish}>
                 {label}
               </Button>
             </Form.Item>
           </Form>
+          <div className="label-ready">
+            {isSignUp ? (
+              <span>
+                Bạn đã là thành viên? <Link href="/dang-nhap">Đăng nhập</Link>
+              </span>
+            ) : (
+              <span>
+                Bạn chưa có tài khoản? <Link href="/dang-ky">Đăng ký</Link>
+              </span>
+            )}
+          </div>
         </div>
       </div>
     </div>
