@@ -4,11 +4,17 @@ import { Button, Menu, Popover } from "antd";
 import { Header } from "antd/lib/layout/layout";
 import Search from "antd/lib/input/Search";
 import ButtonUser from "components/ButtonUser";
+import withLoggedIn from "HOC/withLoggedIn";
+import ButtonInfo from "components/ButtonInfo";
+import { useSelector } from "react-redux";
 const HeaderLayout = (props) => {
+  const authReducer = useSelector((state) => state.authReducer);
+  const isLogin = authReducer?.auth?.isLogin;
   //! State
   const content = (
     <Search placeholder="input search text" style={{ width: 200 }} />
   );
+
   return (
     <Header
       className="header-custom"
@@ -31,7 +37,7 @@ const HeaderLayout = (props) => {
               <img src="/static/assets/img/icon/search.svg" /> Search
             </Button>
           </Popover>
-          <ButtonUser />
+          {isLogin ? <ButtonInfo /> : <ButtonUser />}
         </div>
       </div>
     </Header>

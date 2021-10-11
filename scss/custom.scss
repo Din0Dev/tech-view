@@ -194,7 +194,7 @@ h5 {
     .social {
       padding: 30px 0;
       img {
-        margin-right:18px;
+        margin-right: 18px;
         width: 24px;
         height: 24px;
         color: $white-color;
@@ -303,6 +303,10 @@ h5 {
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
+  .button-user-inner-name {
+    font-size: 20px;
+    font-weight: bold;
+  }
   button {
     margin-bottom: 30px;
   }
@@ -313,5 +317,9 @@ h5 {
   .sign-up {
     color: $white-color;
     background: rgb(90, 177, 90);
+  }
+  .sign-out {
+    color: $white-color;
+    background: rgba(255, 66, 66, 0.993);
   }
 }

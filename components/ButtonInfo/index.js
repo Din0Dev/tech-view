@@ -1,13 +1,13 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
-import { Button, Drawer } from "antd";
+import { Button, Drawer, message } from "antd";
 import Link from "next/link";
-import { useDispatch } from "react-redux";
 import { logout } from "redux/actions";
-
+import router from "next/router";
 const propTypes = {};
 
-const ButtonUser = (props) => {
+const ButtonInfo = (props) => {
   //! State
   const dispatch = useDispatch();
   const [visible, setVisible] = useState(false);
@@ -18,32 +18,40 @@ const ButtonUser = (props) => {
     setVisible(false);
   };
   //! Function
-
+  const key = "updatable";
+  const onLogout = () => {
+    dispatch(logout());
+    message.success({
+      content: "Đăng xuất thành công!",
+      key,
+      duration: 2,
+    });
+  };
   //! Render
   return (
     <div className="button-user">
       <Button onClick={showDrawer}>
-        <img src="/static/assets/img/icon/use.svg" />
+        <img src="/static/assets/img/icon/avanho.png" />
       </Button>
       <Drawer
-        title="User Manager"
+        title="Xin chào, Nam Do!"
         placement="right"
         onClose={onClose}
         visible={visible}
         style={{ display: "flex", flexDirection: "column" }}
       >
         <div className="button-user-inner">
-          <Link href="/dang-nhap">
-            <Button className="sign-in">Đăng Nhập</Button>
+          <Link href="/thong-tin-ca-nhan">
+            <Button className="sign-in">Thông tin cá nhân</Button>
           </Link>
-          <Link href="/dang-ky">
-            <Button className="sign-up">Đăng Ký</Button>
-          </Link>
+          <Button className="sign-out" onClick={onLogout}>
+            Đăng xuất
+          </Button>
         </div>
       </Drawer>
     </div>
   );
 };
 
-ButtonUser.propTypes = propTypes;
-export default ButtonUser;
+ButtonInfo.propTypes = propTypes;
+export default ButtonInfo;

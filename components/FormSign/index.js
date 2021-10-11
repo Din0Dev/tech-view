@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import Title from "components/Title";
 import TitleDeliver from "components/TitleDeliver";
 import { Form, Input, Button, Modal, message } from "antd";
 import Link from "next/link";
-import router from "next/router";
+import router, { useRouter } from "next/router";
+import { Formik } from "formik";
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "redux/actions";
 
 const propTypes = {
   label: PropTypes.string,
@@ -16,7 +19,7 @@ const FormSign = (props) => {
   const validateMessages = {
     required: "${label} is required!",
     types: {
-      email: "${label} is not a valid email!",
+      email: "${label} sai định dạng Email!",
       number: "${label} is not a valid number!",
     },
     number: {
@@ -24,14 +27,36 @@ const FormSign = (props) => {
     },
   };
   const key = "updatable";
+  const authReducer = useSelector((state) => state.authReducer);
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const isLogin = authReducer?.auth?.isLogin;
+  if (isLogin) {
+    router.push("/");
+  }
   const onFinish = (values) => {
-    message.loading({ content: "Đang kiểm tra...", key });
-    setTimeout(() => {
-      message.success({ content: "Đăng nhập thành công!", key, duration: 2 });
-      setTimeout(() => {
-        router.push("/");
-      }, 1000);
-    }, 1000);
+    if (isSignUp) {
+      showModal();
+    } else {
+      if (
+        values.username === "namdo@gmail.com" &&
+        values.password === "123456"
+      ) {
+        message.success({ content: "Đăng nhập thành công!", key, duration: 2 });
+        dispatch(
+          login({
+            username: values.username,
+            password: values.password,
+          })
+        );
+      } else {
+        message.error({
+          content: "Sai tài khoản hoặc mật khấu!",
+          key,
+          duration: 2,
+        });
+      }
+    }
   };
 
   //
@@ -97,53 +122,71 @@ const FormSign = (props) => {
           <TitleDeliver orientation="center" label="hoặc" />
         </div>
         <div className="form-login-form">
-          <Form
-            name="basic"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 16 }}
-            initialValues={{ remember: true }}
-            onFinish={onFinish}
-            validateMessages={validateMessages}
-            autoComplete="off"
-          >
-            {isSignUp && (
-              <Form.Item
-                className="form-input-custom"
-                name="username"
-                rules={[
-                  { required: true, message: "Please input your username!" },
-                ]}
+          <Formik initialValues={{}} onSubmit={onFinish}>
+            {(propsFormik) => (
+              <Form
+                name="basic"
+                labelCol={{ span: 8 }}
+                wrapperCol={{ span: 16 }}
               >
-                <Input className="input-field" placeholder="Họ và tên" />
-              </Form.Item>
+                {isSignUp && (
+                  <Form.Item
+                    className="form-input-custom"
+                    name="username"
+                    rules={[
+                      {
+                        required: true,
+                        message: "Please input your username!",
+                      },
+                    ]}
+                  >
+                    <Input className="input-field" placeholder="Họ và tên" />
+                  </Form.Item>
+                )}
+                <Form.Item
+                  className="form-input-custom"
+                  name={["email"]}
+                  rules={[{ type: "email" }]}
+                >
+                  <Input
+                    className="input-field"
+                    placeholder="Email"
+                    onChange={propsFormik.handleChange("username")}
+                  />
+                </Form.Item>
+
+                <Form.Item
+                  className="form-input-custom"
+                  name="password"
+                  rules={[
+                    { required: true, message: "Vui lòng điền mật khẩu!" },
+                  ]}
+                >
+                  <Input.Password
+                    className="input-field"
+                    placeholder="Password"
+                    onChange={propsFormik.handleChange("password")}
+                  />
+                </Form.Item>
+
+                <Form.Item
+                  className="button-submit"
+                  wrapperCol={{ offset: 8, span: 16 }}
+                >
+                  <Button
+                    type="primary"
+                    type="submit"
+                    onClick={() => {
+                      propsFormik.submitForm();
+                    }}
+                  >
+                    {label}
+                  </Button>
+                </Form.Item>
+              </Form>
             )}
-            <Form.Item
-              className="form-input-custom"
-              name={["email"]}
-              rules={[{ type: "email" }]}
-            >
-              <Input className="input-field" placeholder="Email" />
-            </Form.Item>
+          </Formik>
 
-            <Form.Item
-              className="form-input-custom"
-              name="password"
-              rules={[
-                { required: true, message: "Please input your password!" },
-              ]}
-            >
-              <Input.Password className="input-field" placeholder="Password" />
-            </Form.Item>
-
-            <Form.Item
-              className="button-submit"
-              wrapperCol={{ offset: 8, span: 16 }}
-            >
-              <Button type="primary" onClick={isSignUp ? showModal : onFinish}>
-                {label}
-              </Button>
-            </Form.Item>
-          </Form>
           <div className="label-ready">
             {isSignUp ? (
               <span>

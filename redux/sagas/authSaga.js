@@ -1,14 +1,14 @@
-import { takeLatest, put } from 'redux-saga/effects';
-import authServices from 'services/authServices';
-import types from '../types';
+import { takeLatest, put } from "redux-saga/effects";
+import authServices from "services/authServices";
+import types from "../types";
 
 function* login({ username, password }) {
   try {
-    if (username === "don" && password === "don") {
+    if (username === "namdo@gmail.com" && password === "123456") {
       yield put({ type: types.LOGIN_SUCCESS });
       authServices.saveInfoToStorage();
     } else {
-      yield put({ type: types.LOGIN_FAILED, error });  
+      yield put({ type: types.LOGIN_FAILED, error });
     }
   } catch (error) {
     yield put({ type: types.LOGIN_FAILED, error });
@@ -16,7 +16,7 @@ function* login({ username, password }) {
 }
 
 function* checkAuth() {
-  const isLoggedStorage = window.localStorage.getItem('isLogged') === "true";
+  const isLoggedStorage = window.localStorage.getItem("isLogged") === "true";
   if (isLoggedStorage) {
     yield put({ type: types.CHECK_LOCAL_STORAGE_SUCCESS });
   }
@@ -24,7 +24,7 @@ function* checkAuth() {
 
 function* logout() {
   window.localStorage.clear();
-  yield put({ type: types.LOGOUT_SUCCESS }); 
+  yield put({ type: types.LOGOUT_SUCCESS });
 }
 
 export default function* watchTestSaga() {
