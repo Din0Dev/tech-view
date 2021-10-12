@@ -55,7 +55,7 @@ const SectionNew = (props) => {
               imgSrc={item.imgSrc}
             />
           ))}
-          <ReadMore />
+          <ReadMore href="/tin-tuc"/>
         </Col>
         <Col span={14}>
           <Row>

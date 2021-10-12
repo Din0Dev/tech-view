@@ -20,7 +20,7 @@ const FooterLayout = (props) => {
         <Col span={8}>
           <p>FOLLOW</p>
           <div className="social">
-            <img src="/static/assets/img/icon/fb.svg" />
+            <img src="/static/assets/img/icon/lg.png" />
             <img src="/static/assets/img/icon/insta.svg" />
             <img src="/static/assets/img/icon/youtube.svg" />
           </div>

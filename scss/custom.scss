@@ -7,6 +7,30 @@ body {
   background: $backround-color;
   margin: 0;
   padding: 0;
+  //
+  .ant-dropdown-menu {
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    ul li {
+      font-size: 16px;
+      margin: 0;
+      line-height: 3;
+    }
+    .review-left {
+      .ant-menu-item {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+    .review-right {
+      .ant-menu-item {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 60px;
+      }
+    }
+  }
 }
 .layout-custom {
   background: none !important;
@@ -101,6 +125,7 @@ h5 {
     border-bottom: 2px solid $black-color;
     background: $white-color;
     height: 72px;
+    cursor: pointer;
     .logo {
       width: 100%;
       min-height: 72px;
@@ -144,6 +169,19 @@ h5 {
       .header-navbar-left {
         display: flex;
         flex-direction: row;
+        ul li {
+          button {
+            background: transparent;
+            padding: 20px 0;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+          }
+          button:hover {
+            color: #1890ff;
+          }
+        }
       }
       .header-navnar-right {
         display: flex;
@@ -161,6 +199,7 @@ h5 {
       }
     }
   }
+  //
   .footer-custom {
     padding: 0;
     color: $white-color;
@@ -213,12 +252,12 @@ h5 {
       .ant-card-meta-detail {
         .ant-card-meta-title {
           white-space: inherit;
-          font-size: 20px;
+          font-size: 18px;
           font-weight: bold;
           line-height: 1.2;
         }
         .ant-card-meta-description {
-          font-size: 18px;
+          font-size: 16px;
         }
       }
     }
@@ -257,6 +296,16 @@ h5 {
       font-size: 18px;
       font-weight: 500;
       line-height: 1.4;
+    }
+    .card-item-horizontal-rate,
+    .card-item-horizontal-author {
+      padding-left: 14px;
+      font-size: 20px;
+      color: $brand-color;
+    }
+    .card-item-horizontal-author {
+      font-size: 16px;
+      color: $grey-color;
     }
   }
   //
@@ -321,5 +370,11 @@ h5 {
   .sign-out {
     color: $white-color;
     background: rgba(255, 66, 66, 0.993);
+  }
+}
+//
+.pagination-common {
+  > div {
+    justify-content: center;
   }
 }
