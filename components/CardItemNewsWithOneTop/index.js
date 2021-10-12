@@ -9,14 +9,12 @@ import CardItemHorizontal from "components/CardItemHorizontal";
 
 const propTypes = {};
 
-const CardItemNews = ({
+const CardItemNewsWithOneTop = ({
   label,
   itemLeft1,
   itemRight1,
-  itemRight2,
   imageSrcLeft1,
   imageSrcRight1,
-  imageSrcRight2,
   listItemLeft = [],
   listItemRight = [],
   href = "#",
@@ -45,33 +43,18 @@ const CardItemNews = ({
           ))}
         </Col>
         <Col className="card-item-news-right" span={12}>
-          <Row gutter={30}>
-            <Col className="card-item-news-right_left" span={12}>
-              <CardItem
-                title={itemRight1}
-                ImageSrc={imageSrcRight1}
-                author=""
-              />
-            </Col>
-            <Col className="card-item-news-right_right" span={12}>
-              <CardItem
-                title={itemRight2}
-                ImageSrc={imageSrcRight2}
-                author=""
-              />
-            </Col>
-            {listItemRight.map((el) => (
-              <CardItemHorizontal
-                key={el.id}
-                title={el.title}
-                imgSrc={el.imgSrc}
-                isAuthor={el.isAuthor}
-                isRate={el.isRate}
-                rate={el.rate}
-                author={el.author}
-              />
-            ))}
-          </Row>
+          <CardItem title={itemRight1} ImageSrc={imageSrcRight1} author="" />
+          {listItemRight.map((el) => (
+            <CardItemHorizontal
+              key={el.id}
+              title={el.title}
+              imgSrc={el.imgSrc}
+              isAuthor={el.isAuthor}
+              isRate={el.isRate}
+              rate={el.rate}
+              author={el.author}
+            />
+          ))}
         </Col>
       </Row>
       <ReadMore href={href} />
@@ -79,5 +62,5 @@ const CardItemNews = ({
   );
 };
 
-CardItemNews.propTypes = propTypes;
-export default CardItemNews;
+CardItemNewsWithOneTop.propTypes = propTypes;
+export default CardItemNewsWithOneTop;

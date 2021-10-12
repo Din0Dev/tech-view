@@ -11,6 +11,7 @@ const propTypes = {
   author: PropTypes.string,
   isRate: PropTypes.bool,
   isAuthor: PropTypes.bool,
+  isReverse: PropTypes.bool,
 };
 
 const CardItemHorizontal = (props) => {
@@ -20,6 +21,7 @@ const CardItemHorizontal = (props) => {
     className = "",
     isRate = false,
     isAuthor = false,
+    isReverse = false,
     rate = 5,
     author = "By NamDo",
   } = props;
@@ -33,24 +35,48 @@ const CardItemHorizontal = (props) => {
     <div className={`card-item-horizontal ${className}`}>
       <Card hoverable>
         <Row>
-          <Col span={8}>
-            <div className="card-item-horizontal-img">
-              <img src={imgSrc} alt={title} srcset="" />
-            </div>
-          </Col>
-          <Col span={16}>
-            <div className="card-item-horizontal-title">{title}</div>
-            {isRate && (
-              <Rate
-                className="card-item-horizontal-rate"
-                disabled
-                defaultValue={rate}
-              />
-            )}
-            {isAuthor && (
-              <div className="card-item-horizontal-author">{author}</div>
-            )}
-          </Col>
+          {isReverse ? (
+            <Col span={16}>
+              <div className="card-item-horizontal-title">{title}</div>
+              {isRate && (
+                <Rate
+                  className="card-item-horizontal-rate"
+                  disabled
+                  defaultValue={rate}
+                />
+              )}
+              {isAuthor && (
+                <div className="card-item-horizontal-author">{author}</div>
+              )}
+            </Col>
+          ) : (
+            <Col span={8}>
+              <div className="card-item-horizontal-img">
+                <img src={imgSrc} alt={title} srcset="" />
+              </div>
+            </Col>
+          )}
+          {isReverse ? (
+            <Col span={8}>
+              <div className="card-item-horizontal-img">
+                <img src={imgSrc} alt={title} srcset="" />
+              </div>
+            </Col>
+          ) : (
+            <Col span={16}>
+              <div className="card-item-horizontal-title">{title}</div>
+              {isRate && (
+                <Rate
+                  className="card-item-horizontal-rate"
+                  disabled
+                  defaultValue={rate}
+                />
+              )}
+              {isAuthor && (
+                <div className="card-item-horizontal-author">{author}</div>
+              )}
+            </Col>
+          )}
         </Row>
       </Card>
     </div>
