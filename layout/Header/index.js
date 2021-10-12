@@ -109,11 +109,7 @@ const HeaderLayout = (props) => {
           </a>
         </Menu.Item>
         <Menu.Item>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.luohanacademy.com"
-          >
+          <a rel="noopener noreferrer" href="/review-all">
             All
           </a>
         </Menu.Item>
