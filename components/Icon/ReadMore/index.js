@@ -15,8 +15,8 @@ const ReadMore = ({ href = "/" }) => {
   return (
     <Link href={href}>
       <div className="icon-read-more">
+        <img src="/static/assets/img/icon/arrowright.svg" />
         <p>Xem Thêm</p>
-        <img src="/static/assets/img/icon/Arrow.svg" />
       </div>
     </Link>
   );

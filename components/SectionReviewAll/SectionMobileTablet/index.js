@@ -18,7 +18,7 @@ const SectionMobileTablet = (props) => {
       author: "By NamDo",
       title:
         "Đánh giá iPhone 13 Pro của Apple: Tốt nhất trong số những điều tốt nhất",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/mobile_2.png",
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const SectionMobileTablet = (props) => {
       rate: 5,
       author: "By NamDo",
       title: "Đánh giá Samsung Galaxy S21 5G: Đúng công thức, sai thành phần",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/mobile_3.png",
     },
     {
       id: 3,
@@ -37,7 +37,7 @@ const SectionMobileTablet = (props) => {
       author: "By NamDo",
       title:
         "Đánh giá OnePlus 9 Pro: Điện thoại thông minh đáng tin cậy nhất bạn có thể mua",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/mobile_4.png",
     },
     {
       id: 4,
@@ -47,7 +47,7 @@ const SectionMobileTablet = (props) => {
       author: "By NamDo",
       title:
         "Đánh giá Samsung Galaxy Z Flip 3: Tương lai có thể gập lại đã sẵn sàng cho tất cả mọi người",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/mobile_5.png",
     },
   ];
   const listRight = [
@@ -59,7 +59,7 @@ const SectionMobileTablet = (props) => {
       author: "By NamDo",
       title:
         "Đánh giá Apple iPad Pro 12,9 inch (2021): Nhiều hơn bạn cần, chính xác những gì bạn muốn",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/tablet_2.png",
     },
     {
       id: 2,
@@ -68,7 +68,7 @@ const SectionMobileTablet = (props) => {
       rate: 5,
       author: "By NamDo",
       title: "Đánh giá Lenovo Tab P11 Pro: Phần cứng tuyệt vời ",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/tablet_3.png",
     },
     {
       id: 3,
@@ -77,7 +77,7 @@ const SectionMobileTablet = (props) => {
       rate: 3,
       author: "By NamDo",
       title: "Đánh giá Apple iPad Air (2020): iPad Pro giá bình dân",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/tablet_4.png",
     },
     {
       id: 4,
@@ -86,7 +86,7 @@ const SectionMobileTablet = (props) => {
       rate: 4,
       author: "By NamDo",
       title: "Đánh giá Apple Pencil 2: Lựa chọn mới của mọi người",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/tablet_5.png",
     },
   ];
   //! Function
@@ -100,6 +100,7 @@ const SectionMobileTablet = (props) => {
             label="Điện thoại"
             titleTop="Điện thoại tốt nhất năm 2021"
             authorTop="By NamDo"
+            ImageSrcTop="/static/assets/img/review-all/mobile_1.png"
             listItem={listLeft}
             href="#"
           />
@@ -109,6 +110,7 @@ const SectionMobileTablet = (props) => {
             label="Máy tính bảng"
             titleTop="Máy tính bảng tốt nhất năm 2021"
             authorTop="By NamDo"
+            ImageSrcTop="/static/assets/img/review-all/tablet_1.png"
             listItem={listRight}
             href="#"
           />

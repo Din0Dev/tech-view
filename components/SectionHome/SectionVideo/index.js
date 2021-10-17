@@ -56,7 +56,7 @@ const SectionVideo = (props) => {
           <Col className="gutter-row section-video-custom-preview" span={16}>
             {show && (
               <Card
-                hoverable
+                
                 cover={
                   <video width="100%" height="100%" controls>
                     <source src={objClicked?.VideoSrc} />

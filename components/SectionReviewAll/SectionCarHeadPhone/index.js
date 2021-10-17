@@ -17,7 +17,7 @@ const SectionCarHeadPhone = (props) => {
       rate: 5,
       author: "By NamDo",
       title: "Đánh giá Hyundai Tucson Hybrid Limited AWD 2022: Thêm sức mạnh và hiệu quả",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/car_2.png",
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const SectionCarHeadPhone = (props) => {
       author: "By NamDo",
       title:
         "Đánh giá Kia K5 2.5 GT 2021: Một kỷ nguyên mới",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/car_3.png",
     },
     {
       id: 3,
@@ -37,7 +37,7 @@ const SectionCarHeadPhone = (props) => {
       author: "By NamDo",
       title:
         "Đánh giá Toyota Venza 2021: Star gazer",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/car_4.png",
     },
     {
       id: 4,
@@ -46,7 +46,7 @@ const SectionCarHeadPhone = (props) => {
       rate: 4,
       author: "By NamDo",
       title: "Đánh giá Volkswagen Arteon 2021: Sự sang trọng của Đức cho tất cả mọi người",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/car_5.png",
     },
   ];
   const listRight = [
@@ -58,7 +58,7 @@ const SectionCarHeadPhone = (props) => {
       author: "By NamDo",
       title:
         "Đánh giá Edifier NeoBuds Pro: Một tiêu chuẩn mới trong âm thanh giá cả phải chăng",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/hp_2.png",
     },
     {
       id: 2,
@@ -68,7 +68,7 @@ const SectionCarHeadPhone = (props) => {
       author: "By NamDo",
       title:
         "Đánh giá Sony WF-1000XM4: Tai nghe không dây gần như hoàn hảo",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/hp_3.png",
     },
     {
       id: 3,
@@ -78,7 +78,7 @@ const SectionCarHeadPhone = (props) => {
       author: "By NamDo",
       title:
         "Đánh giá Beats Studio Buds: Đây là AirPods Pro Lite",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/hp_4.png",
     },
     {
       id: 4,
@@ -88,7 +88,7 @@ const SectionCarHeadPhone = (props) => {
       author: "By NamDo",
       title:
         "Corsair Virtuoso RGB Wireless XT đánh giá: Một tai nghe tốt ngoài chơi game",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/hp_5.png",
     },
   ];
   //! Function
@@ -103,6 +103,7 @@ const SectionCarHeadPhone = (props) => {
             titleTop="Những chiếc xe tốt nhất đang bán trên thị trường"
             authorTop="By NamDo"
             listItem={listLeft}
+            ImageSrcTop="/static/assets/img/review-all/car_1.png"
             href="#"
           />
         </Col>
@@ -112,6 +113,7 @@ const SectionCarHeadPhone = (props) => {
             titleTop="Tai nghe tốt nhất năm 2021"
             authorTop="By NamDo"
             listItem={listRight}
+            ImageSrcTop="/static/assets/img/review-all/hp_1.png"
             href="#"
           />
         </Col>

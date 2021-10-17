@@ -45,7 +45,7 @@ const SectionApple = (props) => {
   //! Render
   return (
     <div className="section-new">
-      <Title label="Tin mới" />
+      <Title label="Apple" />
       <Row gutter={30}>
         <Col span={10}>
           {listCard.map((item) => (

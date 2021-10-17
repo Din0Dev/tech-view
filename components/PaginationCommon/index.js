@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import { Col, Pagination, Row } from "antd";
+import router from "next/router";
 
 const propTypes = {};
 
@@ -11,7 +12,7 @@ const PaginationCommon = (props) => {
   const [current, setCurrent] = useState(1);
   //! Function
   const onChange = (page) => {
-    setCurrent(page);
+    router.push("/xem-them");
   };
   //! Render
   return (

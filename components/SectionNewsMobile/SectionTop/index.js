@@ -18,21 +18,28 @@ const SectionTop = (props) => {
       id: 1,
       title: "Verizon mở rộng dịch vụ 5G với ở các thành phố mới",
       category: "mobile",
+      ImageSrc: "/static/assets/img/tin-tuc-mobile/top_2.png"
     },
     {
       id: 2,
       title: "iPhone 13 Mini không thể sạc nhanh với Magsafe",
       category: "mobile",
+      ImageSrc: "/static/assets/img/tin-tuc-mobile/top_3.png"
+
     },
     {
       id: 3,
       title: 'Đối thủ "nặng ký" của Galaxy Z FLip3 sẽ ra mắt trong năm nay',
       category: "mobile",
+      ImageSrc: "/static/assets/img/tin-tuc-mobile/top_4.png"
+
     },
     {
       id: 4,
       title: "iPhone 13 giao hàng chậm trễ vì làn sóng COVID tại Việt Nam",
       category: "mobile",
+      ImageSrc: "/static/assets/img/tin-tuc-mobile/top_5.png"
+
     },
   ];
 
@@ -68,7 +75,11 @@ const SectionTop = (props) => {
     <div className="section-news-mobile-top">
       <Row gutter={30}>
         <Col span={18}>
-          <CardItem title="iPhone 14 có thể giữ notch đặc biệt của nó trong một năm nữa bất chấp những tin đồn" />
+          <CardItem
+            title="iPhone 14 có thể giữ notch đặc biệt của nó trong một năm nữa bất chấp những tin đồn"
+            ImageSrc="/static/assets/img/tin-tuc-mobile/top_1.png"
+            author=""
+          />
         </Col>
         <Col span={6}>
           <Title label="Tin tức mới nhất" />

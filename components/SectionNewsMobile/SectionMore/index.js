@@ -79,7 +79,7 @@ const SectionMore = (props) => {
         <Col span={12}>
           <CardItem
             title="Trải nghiệm Android 12 trên Realme GT Neo2"
-            ImageSrc="/static/assets/img/tin-tuc/section_more_1_span_12.png"
+            ImageSrc="/static/assets/img/tin-tuc-mobile/more_1.png"
           />
         </Col>
         {listItem.map((el) => (

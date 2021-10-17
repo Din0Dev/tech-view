@@ -7,10 +7,12 @@ import Todo from "components/Todo";
 import DefaultLayout from "layout/DefaultLayout";
 import { useTranslation } from "react-i18next";
 import SectionPreview from "components/SectionHome/SectionPreview";
-import SectionTrending from "components/SectionHome/SectionTrending";
 import SectionVideo from "components/SectionHome/SectionVideo";
 import SectionNew from "components/SectionHome/SectionNew";
-import SectionCard from "components/SectionHome/SectionCard";
+import SectionMobile from "components/SectionHome/SectionMobile";
+import SectionComputer from "components/SectionHome/SectionComputer";
+import SectionGames from "components/SectionHome/SectionGames";
+import SectionCar from "components/SectionHome/SectionCar";
 
 export default function Index() {
   const dispatch = useDispatch();
@@ -27,10 +29,14 @@ export default function Index() {
   return (
     <DefaultLayout>
       <SectionPreview />
-      <SectionTrending />
+      {/* <SectionTrending /> */}
       <SectionVideo />
       <SectionNew />
-      <SectionCard />
+      <SectionMobile />
+      <SectionComputer />
+      <SectionGames />
+      <SectionCar />
+      {/* <SectionCard /> */}
     </DefaultLayout>
   );
 }

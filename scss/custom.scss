@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: BeVietNam;
+  font-family: SFPro;
 }
 
 body {
@@ -130,7 +130,7 @@ h5 {
       width: 100%;
       min-height: 72px;
       max-width: 200px;
-      background-image: url("/static/assets/img/tech-view_logo_color.svg");
+      background-image: url("/static/assets/img/tech-view-logo_color.svg");
     }
     > div {
       height: 70px;
@@ -213,7 +213,7 @@ h5 {
     }
     h3,
     h5 {
-      font-family: BeVietNamBold;
+      font-family: SFProBold;
       color: white !important;
     }
     p {

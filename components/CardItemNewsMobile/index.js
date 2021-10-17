@@ -18,7 +18,7 @@ const CardItemNewsMobile = ({
 
   //! Render
   return (
-    <Card hoverable className="card-item-news-mobile">
+    <Card  className="card-item-news-mobile">
       <Row>
         <Col className="card-item-news-mobile-category" span={12}>
           {category}

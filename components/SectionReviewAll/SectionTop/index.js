@@ -16,12 +16,14 @@ const SectionTop = (props) => {
       title: "Đánh giá NINTENDO SWITCH OLED: Nâng cấp là một bản nâng cấp",
       rate: 4,
       author: "10h",
+      imgSrc: "/static/assets/img/review-all/top_2.png",
     },
     {
       id: 2,
       title: "Metroid Dread đánh giá: Nữ hoàng đã trở lại, rất đáng khen ngợi",
       rate: 3,
       author: "11h",
+      imgSrc: "/static/assets/img/review-all/top_3.png",
     },
     {
       id: 3,
@@ -29,12 +31,14 @@ const SectionTop = (props) => {
         "Đánh giá Toyota Highlander Platinum 2021: SUV cỡ trung tiết kiệm nhiên liệu",
       rate: 5,
       author: "2h",
+      imgSrc: "/static/assets/img/review-all/top_4.png",
     },
     {
       id: 4,
       title: "Đánh giá Hyundai Tucson Hybrid Limited AWD 2022: Thêm sức mạnh",
       rate: 4,
       author: "10h",
+      imgSrc: "/static/assets/img/review-all/top_5.png",
     },
     {
       id: 5,
@@ -42,6 +46,7 @@ const SectionTop = (props) => {
         " Đánh giáAmazon Fire TV Stick 4K Max : Thêm lựa chọn cho người dùng",
       rate: 5,
       author: "3h",
+      imgSrc: "/static/assets/img/review-all/top_6.png",
     },
     {
       id: 1,
@@ -49,6 +54,7 @@ const SectionTop = (props) => {
         "Lái thử Mercedes-Benz EQS : Sang trọng Đánh giá NINTENDO SWITCH OLED: Nâng cấp là một bản nâng cấp",
       rate: 4,
       author: "6h",
+      imgSrc: "/static/assets/img/review-all/top_7.png",
     },
   ];
   //! Function
@@ -58,7 +64,10 @@ const SectionTop = (props) => {
     <div className="section-top">
       <Row>
         <Col span={24}>
-          <CardItem title="Đánh giá nhanh Porsche Taycan Turbo S 2020 : Đỉnh cao xe điện" />
+          <CardItem
+            title="Đánh giá nhanh Porsche Taycan Turbo S 2020 : Đỉnh cao xe điện"
+            ImageSrc="/static/assets/img/review-all/top_1.png"
+          />
         </Col>
         {listItem.map((el) => (
           <Col span={12}>

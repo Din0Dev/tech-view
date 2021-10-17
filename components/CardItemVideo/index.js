@@ -31,7 +31,7 @@ const CardItemVideo = (props) => {
   return (
     <div className="CardItemVideo-Custom">
       <Card
-        hoverable
+        
         className={className}
         style={{ width: width }}
         cover={

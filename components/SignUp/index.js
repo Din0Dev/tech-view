@@ -19,7 +19,7 @@ const SignUp = (props) => {
       <Row>
         <Col className="sign-in-img" span={8}>
           <Link href="/">
-            <img src="/static/assets/img/tech-view_logo_white.png" />
+            <img src="/static/assets/img/tech-view-logo_white.svg" />
           </Link>
         </Col>
         <Col className="sign-in-form" span={16}>

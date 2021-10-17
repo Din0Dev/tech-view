@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import { Card, Col, Row, Rate } from "antd";
-
+import Link from "next/link";
 const propTypes = {
   title: PropTypes.string,
   imgSrc: PropTypes.string,
@@ -24,6 +24,7 @@ const CardItemHorizontal = (props) => {
     isReverse = false,
     rate = 5,
     author = "By NamDo",
+    href = "/noi-dung",
   } = props;
   //! State
   const dispatch = useDispatch();
@@ -33,52 +34,54 @@ const CardItemHorizontal = (props) => {
   //! Render
   return (
     <div className={`card-item-horizontal ${className}`}>
-      <Card hoverable>
-        <Row>
-          {isReverse ? (
-            <Col span={16}>
-              <div className="card-item-horizontal-title">{title}</div>
-              {isRate && (
-                <Rate
-                  className="card-item-horizontal-rate"
-                  disabled
-                  defaultValue={rate}
-                />
-              )}
-              {isAuthor && (
-                <div className="card-item-horizontal-author">{author}</div>
-              )}
-            </Col>
-          ) : (
-            <Col span={8}>
-              <div className="card-item-horizontal-img">
-                <img src={imgSrc} alt={title} srcset="" />
-              </div>
-            </Col>
-          )}
-          {isReverse ? (
-            <Col span={8}>
-              <div className="card-item-horizontal-img">
-                <img src={imgSrc} alt={title} srcset="" />
-              </div>
-            </Col>
-          ) : (
-            <Col span={16}>
-              <div className="card-item-horizontal-title">{title}</div>
-              {isRate && (
-                <Rate
-                  className="card-item-horizontal-rate"
-                  disabled
-                  defaultValue={rate}
-                />
-              )}
-              {isAuthor && (
-                <div className="card-item-horizontal-author">{author}</div>
-              )}
-            </Col>
-          )}
-        </Row>
-      </Card>
+      <Link href={href}>
+        <Card>
+          <Row>
+            {isReverse ? (
+              <Col span={16}>
+                <div className="card-item-horizontal-title">{title}</div>
+                {isRate && (
+                  <Rate
+                    className="card-item-horizontal-rate"
+                    disabled
+                    defaultValue={rate}
+                  />
+                )}
+                {isAuthor && (
+                  <div className="card-item-horizontal-author">{author}</div>
+                )}
+              </Col>
+            ) : (
+              <Col span={8}>
+                <div className="card-item-horizontal-img">
+                  <img src={imgSrc} alt={title} srcset="" />
+                </div>
+              </Col>
+            )}
+            {isReverse ? (
+              <Col span={8}>
+                <div className="card-item-horizontal-img">
+                  <img src={imgSrc} alt={title} srcset="" />
+                </div>
+              </Col>
+            ) : (
+              <Col span={16}>
+                <div className="card-item-horizontal-title">{title}</div>
+                {isRate && (
+                  <Rate
+                    className="card-item-horizontal-rate"
+                    disabled
+                    defaultValue={rate}
+                  />
+                )}
+                {isAuthor && (
+                  <div className="card-item-horizontal-author">{author}</div>
+                )}
+              </Col>
+            )}
+          </Row>
+        </Card>
+      </Link>
     </div>
   );
 };

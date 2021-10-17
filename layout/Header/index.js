@@ -6,8 +6,7 @@ import Search from "antd/lib/input/Search";
 import ButtonUser from "components/ButtonUser";
 import ButtonInfo from "components/ButtonInfo";
 import { useSelector } from "react-redux";
-
-const HeaderLayout = (props) => {
+  const HeaderLayout = (props) => {
   const authReducer = useSelector((state) => state.authReducer);
   const isLogin = authReducer?.auth?.isLogin;
 
@@ -117,13 +116,12 @@ const HeaderLayout = (props) => {
       {/*  */}
       <Col className="review-right" span={12}>
         <Menu.Item>
-          <a
-            target="_blank"
+          <Link
             rel="noopener noreferrer"
-            href="https://www.antgroup.com"
+            href="/review-all/review-tv"
           >
             TV
-          </a>
+          </Link>
         </Menu.Item>
         <Menu.Item>
           <a
@@ -167,7 +165,9 @@ const HeaderLayout = (props) => {
             <div className="logo" />
           </Link>
           <Menu mode="horizontal" defaultSelectedKeys={["2"]}>
-            <Menu.Item key="1">Home</Menu.Item>
+            <Menu.Item key="1">
+              <Link href="/">Home</Link>
+            </Menu.Item>
             <Menu.Item key="2">
               <Dropdown
                 overlay={tech}
@@ -188,7 +188,9 @@ const HeaderLayout = (props) => {
                 <button onClick={(e) => e.preventDefault()}>Reviews</button>
               </Dropdown>
             </Menu.Item>
-            <Menu.Item key="4">Góc nhìn</Menu.Item>
+            <Menu.Item key="4">
+              <Link href="/goc-nhin">Góc nhìn</Link>
+            </Menu.Item>
             <Menu.Item key="5">How-to?</Menu.Item>
           </Menu>
         </div>

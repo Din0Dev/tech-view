@@ -16,9 +16,8 @@ const SectionComputer = (props) => {
       isAuthor: true,
       rate: 5,
       author: "By NamDo",
-      title:
-        "Đánh giá Microsoft Surface Laptop Studio: Kỳ lạ và tuyệt vời",
-      imgSrc: "",
+      title: "Đánh giá Microsoft Surface Laptop Studio: Kỳ lạ và tuyệt vời",
+      imgSrc: "/static/assets/img/review-all/laptop_2.png",
     },
     {
       id: 2,
@@ -26,8 +25,9 @@ const SectionComputer = (props) => {
       isAuthor: true,
       rate: 5,
       author: "By NamDo",
-      title: "Đánh giá Lenovo ThinkPad P15 Gen 2: Máy trạm di động trường học cũ",
-      imgSrc: "",
+      title:
+        "Đánh giá Lenovo ThinkPad P15 Gen 2: Máy trạm di động trường học cũ",
+      imgSrc: "/static/assets/img/review-all/laptop_3.png",
     },
     {
       id: 3,
@@ -37,7 +37,7 @@ const SectionComputer = (props) => {
       author: "By NamDo",
       title:
         "Lenovo ThinkPad X1 Extreme Gen 4 Đánh giá: Nhanh nhưng không hoàn hảo",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/laptop_4.png",
     },
     {
       id: 4,
@@ -45,9 +45,8 @@ const SectionComputer = (props) => {
       isAuthor: true,
       rate: 4,
       author: "By NamDo",
-      title:
-        "Đánh giá OLED Dell XPS 15: Tốt nhất tiếp tục trở nên tốt hơn",
-      imgSrc: "",
+      title: "Đánh giá OLED Dell XPS 15: Tốt nhất tiếp tục trở nên tốt hơn",
+      imgSrc: "/static/assets/img/review-all/laptop_5.png",
     },
   ];
   const listRight = [
@@ -59,7 +58,7 @@ const SectionComputer = (props) => {
       author: "By NamDo",
       title:
         "Đánh giá Apple iPad Pro 12,9 inch (2021): Nhiều hơn bạn cần, chính xác những gì bạn muốn",
-      imgSrc: "",
+      imgSrc: "/static/assets/img/review-all/pc_2.png",
     },
     {
       id: 2,
@@ -67,8 +66,9 @@ const SectionComputer = (props) => {
       isAuthor: true,
       rate: 5,
       author: "By NamDo",
-      title: "Đánh giá Razer Huntsman V2 TKL: Một lập luận thuyết phục cho bàn phím có dây",
-      imgSrc: "",
+      title:
+        "Đánh giá Razer Huntsman V2 TKL: Một lập luận thuyết phục cho bàn phím có dây",
+      imgSrc: "/static/assets/img/review-all/pc_3.png",
     },
     {
       id: 3,
@@ -76,8 +76,9 @@ const SectionComputer = (props) => {
       isAuthor: true,
       rate: 3,
       author: "By NamDo",
-      title: "Đánh giá Dell 32 4K USB-C Hub Monitor: Hoàn hảo kết nối 4K thuận tiện",
-      imgSrc: "",
+      title:
+        "Đánh giá Dell 32 4K USB-C Hub Monitor: Hoàn hảo kết nối 4K thuận tiện",
+      imgSrc: "/static/assets/img/review-all/pc_4.png",
     },
     {
       id: 4,
@@ -85,8 +86,9 @@ const SectionComputer = (props) => {
       isAuthor: true,
       rate: 4,
       author: "By NamDo",
-      title: "Marsback Zephyr Pro đánh giá: Một con chuột tuyệt vời đến nỗi nó có quạt bên trong",
-      imgSrc: "",
+      title:
+        "Marsback Zephyr Pro đánh giá: Một con chuột tuyệt vời đến nỗi nó có quạt bên trong",
+      imgSrc: "/static/assets/img/review-all/pc_5.png",
     },
   ];
   //! Function
@@ -101,6 +103,7 @@ const SectionComputer = (props) => {
             titleTop="Những máy tính xách tay tốt nhất để mua vào năm 2021"
             authorTop="By NamDo"
             listItem={listLeft}
+            ImageSrcTop="/static/assets/img/review-all/laptop_1.png"
             href="#"
           />
         </Col>
@@ -110,6 +113,7 @@ const SectionComputer = (props) => {
             titleTop="Máy tính all in one để bàn tốt nhất cho năm 2021"
             authorTop="By NamDo"
             listItem={listRight}
+            ImageSrcTop="/static/assets/img/review-all/pc_1.png"
             href="#"
           />
         </Col>
