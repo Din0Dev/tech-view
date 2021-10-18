@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import withLoggedIn from "HOC/withLoggedIn";
+import SectionInfomation from "components/SectionInfomation";
 
 const propTypes = {};
 
@@ -12,7 +13,11 @@ const InfomationPage = (props) => {
   //! Function
 
   //! Render
-  return <div>Thông tin cá nhân</div>;
+  return (
+    <div className="infomation-page">
+      <SectionInfomation />
+    </div>
+  );
 };
 
 InfomationPage.propTypes = propTypes;

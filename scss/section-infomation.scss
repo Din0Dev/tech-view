@@ -1,0 +1,93 @@
+.infomation-page {
+  .section-infomation {
+    .ant-tabs-content-holder {
+      background: $white-color;
+    }
+    .header-infomation {
+      background: $white-color;
+      height: 72px;
+      cursor: pointer;
+      .logo {
+        width: 100%;
+        min-height: 72px;
+        max-width: 200px;
+        background-image: url("/static/assets/img/tech-view-logo_color.svg");
+      }
+      .header-navbar-right {
+        align-items: center;
+        display: flex;
+        justify-content: right;
+        img {
+          padding: 0 15px;
+        }
+      }
+    }
+    .container-infomation {
+      .ant-tabs-tab {
+        color: $grey-color;
+        font-size: 17px;
+      }
+      .ant-tabs-tab-active {
+        background: $white-color;
+        .ant-tabs-tab-btn {
+          color: $black-color;
+          font-weight: bold;
+        }
+      }
+    }
+    .tab-infomation {
+      .tab-infomation-activity {
+        padding: 15px;
+        font-size: 18px;
+        .ant-row {
+          text-align: center;
+          .tab-infomation-seen {
+            border-right: 2px solid $grey-color;
+          }
+        }
+      }
+      .tab-infomation-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .btn-edit {
+          font-size: 20px;
+          border: none;
+          background: transparent;
+          color: $brand-sencondary-color;
+        }
+        border-bottom: 2px solid $grey-color;
+      }
+      .tab-infomation-ava {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+      }
+      .tab-infomation-form {
+        width: 60%;
+        margin: auto;
+        .input-custom {
+          display: flex;
+          flex-direction: column;
+          padding: 15px 0;
+          .ant-form-item-label {
+            label {
+              color: $grey-color;
+              font-size: 16px;
+            }
+            text-align: left;
+            padding-bottom: 5px;
+          }
+        }
+        .ant-form-item-label > label::after {
+          content: "";
+        }
+        input {
+          border: none;
+          border-bottom: 2px solid $grey-color;
+        }
+      }
+    }
+  }
+}
