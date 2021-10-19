@@ -16,14 +16,14 @@ const SectionTop = (props) => {
   return (
     <div className="section-top">
       <Row gutter={30}>
-        <Col span={12}>
+        <Col lg={12} xs={24} md={24}>
           <CardItem
             title="Các trang công nghệ thế giới đánh giá sao về iPhone 13 series?"
             author=""
             ImageSrc="/static/assets/img/tin-tuc/section_top_1.png"
           />
         </Col>
-        <Col span={12}>
+        <Col lg={12} xs={24} md={24}>
           <CardItem
             title="Microsoft ra mắt Surface Duo 2 và Surface Go 3: Nhiều nâng cấp đột phá!"
             author=""

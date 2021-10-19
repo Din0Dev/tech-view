@@ -46,7 +46,7 @@ const SectionAndroid = (props) => {
     <div className="section-new">
       <Title label="Android" />
       <Row gutter={30}>
-        <Col span={10}>
+        <Col lg={10} md={24} xs={24}>
           {listCard.map((item) => (
             <CardItemHorizontal
               key={item.id}
@@ -56,7 +56,7 @@ const SectionAndroid = (props) => {
           ))}
           <ReadMore href="/tin-tuc" />
         </Col>
-        <Col span={14}>
+        <Col className="is-mobile" span={14}>
           <Row>
             <Col span={24}>
               <CardItem

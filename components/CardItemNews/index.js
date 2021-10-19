@@ -30,7 +30,7 @@ const CardItemNews = ({
     <div className="card-item-news">
       <Title label={label} />
       <Row gutter={30}>
-        <Col className="card-item-news-left" span={12}>
+        <Col className="card-item-news-left" lg={12} xs={24} md={24}>
           <CardItem title={itemLeft1} ImageSrc={imageSrcLeft1} author="" />
           {listItemLeft.map((el) => (
             <CardItemHorizontal
@@ -44,7 +44,7 @@ const CardItemNews = ({
             />
           ))}
         </Col>
-        <Col className="card-item-news-right" span={12}>
+        <Col className="card-item-news-right" lg={12} xs={24} md={24}>
           <Row gutter={30}>
             <Col className="card-item-news-right_left" span={12}>
               <CardItem

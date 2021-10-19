@@ -44,7 +44,7 @@ const SectionAttention = (props) => {
         customComponent={
           <Row gutter={30}>
             {listItem.map((el) => (
-              <Col span={6}>
+              <Col lg={6} xs={24} md={24}>
                 <CardItem
                   key={el.id}
                   title={el.title}

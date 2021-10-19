@@ -34,14 +34,14 @@ const SectionTop = (props) => {
     <div className="section-review-tv-top">
       <Title label="TV Review" />
       <Row gutter={30}>
-        <Col span={12}>
+        <Col lg={12} md={24} xs={24}>
           <CardItem
             title="Tv tốt nhất năm 2021"
             author=""
             ImageSrc="/static/assets/img/review-tv/top_1.png"
           />
         </Col>
-        <Col span={12}>
+        <Col lg={12} md={24} xs={24}>
           <CardItem
             title="Tv 4K tốt nhất dưới 10 triệu đồng trong  năm 2021"
             author=""
@@ -49,7 +49,7 @@ const SectionTop = (props) => {
           />
         </Col>
         {listItem.map((el) => (
-          <Col span={6}>
+          <Col lg={6} md={12} xs={12}>
             <CardItem
               key={el.id}
               title={el.title}

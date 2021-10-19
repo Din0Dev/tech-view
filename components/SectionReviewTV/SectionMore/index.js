@@ -99,7 +99,7 @@ const SectionMore = (props) => {
       <Title label="Xem thêm tin" />
       <Row gutter={30}>
         {listItem.map((el) => (
-          <Col span={6}>
+          <Col lg={6} md={24} xs={24}>
             <CardItem
               key={el.id}
               title={el.title}

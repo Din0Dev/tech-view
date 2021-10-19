@@ -148,10 +148,10 @@ const SectionSeeMore = (props) => {
 
   //! Render
   return (
-    <DefaultLayout>
+    <>
       <Row gutter={30}>
         {listItem.map((el) => (
-          <Col span={6}>
+          <Col lg={6} md={8} xs={12}>
             <CardItem
               key={el.id}
               author=""
@@ -161,7 +161,7 @@ const SectionSeeMore = (props) => {
           </Col>
         ))}
       </Row>
-    </DefaultLayout>
+    </>
   );
 };
 

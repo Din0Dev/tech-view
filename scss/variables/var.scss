@@ -9,7 +9,7 @@ $state-green-color: #6bbe66;
 $state-orange-color: #f58c2b;
 $state-red-color: #e71c1c;
 //
-$backround-color: #F6F6F6;
+$backround-color: #f6f6f6;
 $black-color: #121212;
 $white-color: #fff;
 $white-sencondary-color: #fbfbfb;
@@ -28,3 +28,15 @@ $grey-sencondary-color: #d9d9d9;
 $fz30: 30px;
 $fz20: 20px;
 $fz16: 16px;
+// REPONSIVE
+@mixin xs {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: 992px) {
+    @content;
+  }
+}

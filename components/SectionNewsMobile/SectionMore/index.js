@@ -76,14 +76,14 @@ const SectionMore = (props) => {
     <div className="section-more">
       <Title label="Xem thêm tin" />
       <Row gutter={30}>
-        <Col span={12}>
+        <Col lg={12} md={24} xs={24}>
           <CardItem
             title="Trải nghiệm Android 12 trên Realme GT Neo2"
             ImageSrc="/static/assets/img/tin-tuc-mobile/more_1.png"
           />
         </Col>
         {listItem.map((el) => (
-          <Col span={6}>
+          <Col lg={6} md={8} xs={12}>
             <CardItem key={el.id} title={el.title} ImageSrc={el.ImageSrc} />
           </Col>
         ))}

@@ -68,14 +68,14 @@ const SectionList = (props) => {
         "Apple vẫn bất ngờ phát hành macOS Big Sur 11.6.1 Beta dù đang thử nghiệm macOS 12",
       imgSrc: "/static/assets/img/section-new/tin-moi-left_5.png",
     },
-  ]
+  ];
   //! Function
 
   //! Render
   return (
     <div className="section-list">
       <Row gutter={30}>
-        <Col span={10}>
+        <Col lg={10} xs={24} md={24}>
           {listLeft.map((el) => (
             <CardItemHorizontal
               key={el.id}
@@ -84,23 +84,23 @@ const SectionList = (props) => {
             />
           ))}
         </Col>
-        <Col span={14}>
+        <Col lg={14} xs={24} md={24}>
           <Row gutter={30}>
-            <Col span={24}>
+            <Col lg={24} xs={24} md={24}>
               <CardItem
                 title="Tra tấn iPhone 13 Pro Max: Mặt kính Ceramic Shield, khung thép có giúp thiết bị sống sót?"
                 author=""
                 ImageSrc="/static/assets/img/section-new/tin-moi-right_1.png"
               />
             </Col>
-            <Col span={12} className="section-new-inner-left">
+            <Col lg={12} xs={12} md={12} className="section-new-inner-left">
               <CardItem
                 title="Hình ảnh mới của Samsung Galaxy S22 Ultra với cụm camera độc nhất thị trường"
                 author=""
                 ImageSrc="/static/assets/img/section-new/tin-moi-right_2.png"
               />
             </Col>
-            <Col span={12} className="section-new-inner-right">
+            <Col lg={12} xs={12} md={12} className="section-new-inner-right">
               <CardItem
                 title="3 chiếc iPhone chính hãng có giá rẻ nhất trong tháng 10, vẫn được khách Việt ưa chuộng"
                 author=""
@@ -109,21 +109,21 @@ const SectionList = (props) => {
             </Col>
           </Row>
           <Row gutter={30}>
-            <Col span={24}>
+            <Col lg={24} xs={24} md={24}>
               <CardItem
                 title="Tra tấn iPhone 13 Pro Max: Mặt kính Ceramic Shield, khung thép có giúp thiết bị sống sót?"
                 author=""
                 ImageSrc="/static/assets/img/section-new/tin-moi-right_1.png"
               />
             </Col>
-            <Col span={12} className="section-new-inner-left">
+            <Col lg={12} xs={12} md={12} className="section-new-inner-left">
               <CardItem
                 title="Hình ảnh mới của Samsung Galaxy S22 Ultra với cụm camera độc nhất thị trường"
                 author=""
                 ImageSrc="/static/assets/img/section-new/tin-moi-right_2.png"
               />
             </Col>
-            <Col span={12} className="section-new-inner-right">
+            <Col lg={12} xs={12} md={12} className="section-new-inner-right">
               <CardItem
                 title="3 chiếc iPhone chính hãng có giá rẻ nhất trong tháng 10, vẫn được khách Việt ưa chuộng"
                 author=""

@@ -63,14 +63,14 @@ const SectionTop = (props) => {
   return (
     <div className="section-top">
       <Row>
-        <Col span={24}>
+        <Col lg={24}>
           <CardItem
             title="Đánh giá nhanh Porsche Taycan Turbo S 2020 : Đỉnh cao xe điện"
             ImageSrc="/static/assets/img/review-all/top_1.png"
           />
         </Col>
         {listItem.map((el) => (
-          <Col span={12}>
+          <Col lg={12} md={12} xs={24}>
             <CardItemHorizontal
               key={el.id}
               isReverse={true}

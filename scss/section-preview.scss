@@ -7,6 +7,12 @@
         .ant-card-meta-title {
           font-weight: bold;
           font-size: 30px;
+          @include xs{
+            font-size: 16px;
+           }
+           @include md {
+             font-size: 16px;
+           }
         }
       }
       .section-preview-inner-left-bottom {
@@ -30,8 +36,22 @@
   }
   .section-preview-right {
     margin: 0 15px;
+    @include xs {
+      margin: 0 -15px;
+      margin-top: 30px;
+    }
+    @include md {
+      margin: 0 -15px;
+      margin-top: 30px;
+    }
     background: $white-color;
     > div {
+      @include xs {
+        padding: 0;
+      }
+      @include md {
+        padding: 0;
+      }
       padding: 0 30px;
     }
   }

@@ -16,6 +16,12 @@
   background: $white-color;
   padding: 30px;
   font-size: 30px;
+  @include xs{
+    font-size: 16px;
+   }
+   @include md {
+     font-size: 16px;
+   }
 }
 .section-news-readmore {
   margin: 30px 0;
@@ -28,6 +34,12 @@
     .ant-card-head {
       .ant-card-head-title {
         font-size: 30px;
+        @include xs{
+          font-size: 16px;
+         }
+         @include md {
+           font-size: 16px;
+         }
         font-weight: 500;
       }
     }

@@ -53,10 +53,14 @@ const SectionVideo = (props) => {
     <div className="section-video-custom">
       <Card title={title} extra={<ReadMore />}>
         <Row gutter={17}>
-          <Col className="gutter-row section-video-custom-preview" span={16}>
+          <Col
+            className="gutter-row section-video-custom-preview"
+            lg={16}
+            xs={24}
+            md={24}
+          >
             {show && (
               <Card
-                
                 cover={
                   <video width="100%" height="100%" controls>
                     <source src={objClicked?.VideoSrc} />
@@ -67,7 +71,12 @@ const SectionVideo = (props) => {
               </Card>
             )}
           </Col>
-          <Col className="gutter-row section-video-scrollbar" span={8}>
+          <Col
+            className="gutter-row section-video-scrollbar"
+            lg={8}
+            xs={24}
+            md={24}
+          >
             <SectionVideoScrollBar
               listVideo={listVideo}
               onClickItem={onClickItemSlider}

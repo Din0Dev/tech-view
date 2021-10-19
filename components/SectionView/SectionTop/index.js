@@ -62,14 +62,14 @@ const SectionTop = (props) => {
   return (
     <div className="sectoin-top">
       <Row gutter={30}>
-        <Col span={12}>
+        <Col lg={12} md={12} xs={24}>
           <CardItem
             title="Các trang công nghệ thế giới đánh giá sao về iPhone 13 series?"
             author=""
             ImageSrc="/static/assets/img/tin-tuc/section_top_1.png"
           />
         </Col>
-        <Col span={12}>
+        <Col lg={12} md={12} xs={24}>
           <CardItem
             title="Microsoft ra mắt Surface Duo 2 và Surface Go 3: Nhiều nâng cấp đột phá!"
             author=""
@@ -77,7 +77,7 @@ const SectionTop = (props) => {
           />
         </Col>
         {listItemTop.map((el) => (
-          <Col span={6}>
+          <Col lg={6} md={12} xs={12}>
             <CardItem
               key={el.id}
               title={el.title}

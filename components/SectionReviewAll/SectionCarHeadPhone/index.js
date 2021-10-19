@@ -97,7 +97,7 @@ const SectionCarHeadPhone = (props) => {
   return (
     <div className="section-review-inner">
       <Row gutter={30}>
-        <Col span={12}>
+        <Col lg={12} md={12} xs={24}>
           <CardItemReview
             label="Xe"
             titleTop="Những chiếc xe tốt nhất đang bán trên thị trường"
@@ -107,7 +107,7 @@ const SectionCarHeadPhone = (props) => {
             href="#"
           />
         </Col>
-        <Col span={12}>
+        <Col lg={12} md={12} xs={24}>
           <CardItemReview
             label="Tai nghe"
             titleTop="Tai nghe tốt nhất năm 2021"

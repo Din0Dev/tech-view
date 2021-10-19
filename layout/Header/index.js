@@ -6,7 +6,8 @@ import Search from "antd/lib/input/Search";
 import ButtonUser from "components/ButtonUser";
 import ButtonInfo from "components/ButtonInfo";
 import { useSelector } from "react-redux";
-  const HeaderLayout = (props) => {
+import NavbarM from "components/Mobile/NavbarM";
+const HeaderLayout = (props) => {
   const authReducer = useSelector((state) => state.authReducer);
   const isLogin = authReducer?.auth?.isLogin;
 
@@ -20,47 +21,27 @@ import { useSelector } from "react-redux";
     <Row>
       <Menu>
         <Menu.Item>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.antgroup.com"
-          >
+          <a rel="noopener noreferrer" href="/">
             Điện thoại
           </a>
         </Menu.Item>
         <Menu.Item>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.aliyun.com"
-          >
+          <a rel="noopener noreferrer" href="/">
             Máy tính
           </a>
         </Menu.Item>
         <Menu.Item>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.luohanacademy.com"
-          >
+          <a rel="noopener noreferrer" href="/">
             Gaming
           </a>
         </Menu.Item>
         <Menu.Item>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.luohanacademy.com"
-          >
+          <a rel="noopener noreferrer" href="/">
             Xe
           </a>
         </Menu.Item>
         <Menu.Item>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.luohanacademy.com"
-          >
+          <a rel="noopener noreferrer" href="/">
             All
           </a>
         </Menu.Item>
@@ -72,38 +53,22 @@ import { useSelector } from "react-redux";
     <Row>
       <Col className="review-left" span={12}>
         <Menu.Item>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.antgroup.com"
-          >
+          <a rel="noopener noreferrer" href="/">
             Điện thoại
           </a>
         </Menu.Item>
         <Menu.Item>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.aliyun.com"
-          >
+          <a rel="noopener noreferrer" href="/">
             Máy tính bảng
           </a>
         </Menu.Item>
         <Menu.Item>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.luohanacademy.com"
-          >
+          <a rel="noopener noreferrer" href="/">
             Laptop
           </a>
         </Menu.Item>
         <Menu.Item>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.luohanacademy.com"
-          >
+          <a rel="noopener noreferrer" href="/m">
             Máy tính
           </a>
         </Menu.Item>
@@ -116,39 +81,18 @@ import { useSelector } from "react-redux";
       {/*  */}
       <Col className="review-right" span={12}>
         <Menu.Item>
-          <Link
-            rel="noopener noreferrer"
-            href="/review-all/review-tv"
-          >
+          <Link rel="noopener noreferrer" href="/review-tv">
             TV
           </Link>
         </Menu.Item>
         <Menu.Item>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.aliyun.com"
-          >
-            Loa
-          </a>
+          <a rel="noopener noreferrer">Loa</a>
         </Menu.Item>
         <Menu.Item>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.luohanacademy.com"
-          >
-            Tai nghe
-          </a>
+          <a rel="noopener noreferrer">Tai nghe</a>
         </Menu.Item>
         <Menu.Item>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.luohanacademy.com"
-          >
-            Đồng hồ thông minh
-          </a>
+          <a rel="noopener noreferrer">Đồng hồ thông minh</a>
         </Menu.Item>
       </Col>
     </Row>
@@ -195,12 +139,17 @@ import { useSelector } from "react-redux";
           </Menu>
         </div>
         <div className="header-navnar-right">
-          <Popover placement="bottomRight" content={content} trigger="click">
-            <Button>
-              <img src="/static/assets/img/icon/search.svg" /> Search
-            </Button>
-          </Popover>
-          {isLogin ? <ButtonInfo /> : <ButtonUser />}
+          <div className="header-navbar-right-button">
+            <Popover placement="bottomRight" content={content} trigger="click">
+              <Button>
+                <img src="/static/assets/img/icon/search.svg" /> Search
+              </Button>
+            </Popover>
+            {isLogin ? <ButtonInfo /> : <ButtonUser />}
+          </div>
+          <div className="header-navbar-right-button-mobile">
+            <NavbarM />
+          </div>
         </div>
       </div>
     </Header>

@@ -5,8 +5,43 @@
 
 body {
   background: $backround-color;
+  @include xs {
+    background: $white-color;
+  }
+  @include md {
+    background: $white-color;
+  }
+  .is-mobile {
+    @include xs {
+      display: none;
+    }
+    @include md {
+      display: none;
+    }
+  }
   margin: 0;
   padding: 0;
+  .drawer-menu {
+    .ant-drawer-header {
+      border-bottom: 2px solid $grey-color;
+    }
+    .ant-drawer-title {
+      img {
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .menu-mobile ul li a {
+      color: $black-color;
+      font-size: 16px;
+    }
+    .menu-mobile ul li {
+      padding: 5px 0;
+    }
+  }
   //
   .ant-dropdown-menu {
     display: flex;
@@ -54,7 +89,8 @@ h5 {
 .error-page {
   width: 100%;
   height: 1000px;
-  background: linear-gradient(104.75deg, #45A3FA 0%, #0074F5 100%);  position: relative;
+  background: linear-gradient(104.75deg, #45a3fa 0%, #0074f5 100%);
+  position: relative;
   .err-page-bg {
     width: 100%;
     img {
@@ -94,6 +130,12 @@ h5 {
 }
 //
 .title-custom {
+  @include xs {
+    font-size: 24px;
+  }
+  @include md {
+    font-size: 24px;
+  }
   font-size: 30px;
   font-weight: bold;
   p {
@@ -102,6 +144,12 @@ h5 {
 }
 // ICON
 .icon-read-more {
+  @include xs {
+    font-size: 14px;
+  }
+  @include md {
+    font-size: 14px;
+  }
   font-size: 16px;
   font-weight: bold;
   color: $brand-color;
@@ -120,6 +168,12 @@ h5 {
   .container {
     width: 70%;
     margin: auto;
+    @include xs {
+      width: 90%;
+    }
+    @include md {
+      width: 90%;
+    }
   }
   .header-custom {
     border-bottom: 2px solid $black-color;
@@ -131,6 +185,8 @@ h5 {
       min-height: 72px;
       max-width: 200px;
       background-image: url("/static/assets/img/tech-view-logo_color.svg");
+      background-repeat: no-repeat;
+      background-position: center;
     }
     > div {
       height: 70px;
@@ -155,13 +211,34 @@ h5 {
         font-size: $fz16;
         font-weight: bold;
       }
+      @include xs {
+        display: none;
+      }
+      @include md {
+        display: none;
+      }
     }
     .header-navbar {
+      @include xs {
+        width: 100%;
+      }
+      @include md {
+        width: 100%;
+      }
       width: 75%;
       margin: auto;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      .navbar-mobile {
+        button {
+          background: transparent;
+          color: black;
+          font-weight: bold;
+          font-size: 20px;
+          border: none;
+        }
+      }
       .header-navbar-left,
       .header-navbar-right {
         width: 100%;
@@ -184,21 +261,40 @@ h5 {
         }
       }
       .header-navnar-right {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        height: 100%;
-        button {
-          border: none;
+        .header-navbar-right-button {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          height: 100%;
+          button {
+            border: none;
+          }
+          img {
+            margin: 0 13px;
+            width: 24px;
+            height: 24px;
+          }
+          @include xs {
+            display: none;
+          }
+          @include md {
+            display: none;
+          }
         }
-        img {
-          margin: 0 13px;
-          width: 24px;
-          height: 24px;
+
+        .header-navbar-right-button-mobile {
+          display: none;
+          @include xs {
+            display: inline;
+          }
+          @include md {
+            display: inline;
+          }
         }
       }
     }
   }
+
   //
   .footer-custom {
     padding: 0;
@@ -215,9 +311,21 @@ h5 {
     h5 {
       font-family: SFProBold;
       color: white !important;
+      @include xs {
+        font-size: 25px;
+      }
+      @include md {
+        font-size: 16px;
+      }
     }
     p {
       font-size: 24px;
+      @include xs {
+        font-size: 16px;
+      }
+      @include md {
+        font-size: 16px;
+      }
       font-weight: 700;
     }
     ul {
@@ -245,6 +353,14 @@ h5 {
   .CardItemVideo-Custom {
     .ant-card {
       border: none;
+      img {
+        @include xs {
+          height: 300px;
+        }
+        @include md {
+          height: 300px;
+        }
+      }
     }
     margin-bottom: 30px;
     .ant-card-body {
@@ -258,6 +374,12 @@ h5 {
         }
         .ant-card-meta-description {
           font-size: 16px;
+          @include xs {
+            font-size: 10px;
+          }
+          @include md {
+            font-size: 10px;
+          }
         }
       }
     }
@@ -267,10 +389,22 @@ h5 {
     display: flex;
     flex-direction: row;
     .card-item-top-trending-custom-top-label {
+      @include xs {
+        font-size: 16px;
+      }
+      @include md {
+        font-size: 16px;
+      }
       font-size: 30px;
       font-weight: bold;
     }
     .card-item-top-trending-custom-top-detail {
+      @include xs {
+        font-size: 16px;
+      }
+      @include md {
+        font-size: 16px;
+      }
       font-size: 30px;
       font-weight: bold;
     }
@@ -294,6 +428,12 @@ h5 {
     .card-item-horizontal-title {
       padding-left: 14px;
       font-size: 18px;
+      @include xs {
+        font-size: 14px;
+      }
+      @include md {
+        font-size: 14px;
+      }
       font-weight: 500;
       line-height: 1.4;
     }
@@ -301,10 +441,22 @@ h5 {
     .card-item-horizontal-author {
       padding-left: 14px;
       font-size: 20px;
+      @include xs {
+        font-size: 16px;
+      }
+      @include md {
+        font-size: 16px;
+      }
       color: $brand-color;
     }
     .card-item-horizontal-author {
       font-size: 16px;
+      @include xs {
+        font-size: 12px;
+      }
+      @include md {
+        font-size: 12px;
+      }
       color: $grey-color;
     }
   }
@@ -314,6 +466,12 @@ h5 {
       border: none;
     }
     .ant-card-head-title {
+      @include xs {
+        font-size: 16px;
+      }
+      @include md {
+        font-size: 16px;
+      }
       font-size: 30px;
       font-weight: bold;
     }
@@ -333,6 +491,12 @@ h5 {
     .item-section-right {
       .card-item-horizontal-title {
         font-size: 16px;
+        @include xs {
+          font-size: 14px;
+        }
+        @include md {
+          font-size: 14px;
+        }
       }
     }
   }

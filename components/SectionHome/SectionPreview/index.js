@@ -14,11 +14,16 @@ const SectionPreview = (props) => {
   //! Render
   return (
     <Row className="section-preview" gutter={30}>
-      <Col className="gutter-row" span={16}>
+      <Col className="gutter-row" lg={16} xs={24} md={24}>
         {/*  */}
         <Row className="section-preview-left" gutter={30}>
           {/*  */}
-          <Col className="gutter-row section-preview-inner-left" span={16}>
+          <Col
+            className="gutter-row section-preview-inner-left"
+            lg={16}
+            xs={24}
+            md={24}
+          >
             <CardItem
               className="section-preview-inner-left-top"
               title={
@@ -48,7 +53,12 @@ const SectionPreview = (props) => {
             </Row>
           </Col>
           {/*  */}
-          <Col className="gutter-row section-preview-inner-right" span={8}>
+          <Col
+            className="gutter-row section-preview-inner-right"
+            lg={8}
+            md={24}
+            xs={24}
+          >
             <CardItem
               title={
                 "Galaxy Z Flip3 có độ bền ấn tượng, bẻ ngược bằng tay không hề hấn gì"
@@ -64,7 +74,7 @@ const SectionPreview = (props) => {
           </Col>
         </Row>
       </Col>
-      <Col className="gutter-row" span={8}>
+      <Col className="gutter-row" lg={8} md={24} xs={24}>
         <div className="section-preview-right">
           <Title label={"Đáng chú ý"} />
           <CardItem

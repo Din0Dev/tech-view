@@ -74,14 +74,14 @@ const SectionTop = (props) => {
   return (
     <div className="section-news-mobile-top">
       <Row gutter={30}>
-        <Col span={18}>
+        <Col lg={18} md={24} xs={24}>
           <CardItem
             title="iPhone 14 có thể giữ notch đặc biệt của nó trong một năm nữa bất chấp những tin đồn"
             ImageSrc="/static/assets/img/tin-tuc-mobile/top_1.png"
             author=""
           />
         </Col>
-        <Col span={6}>
+        <Col lg={6} md={24} xs={24}>
           <Title label="Tin tức mới nhất" />
           {listNews.map((el) => (
             <CardItemNewsMobile
@@ -93,7 +93,7 @@ const SectionTop = (props) => {
           ))}
         </Col>
         {listItem.map((el) => (
-          <Col span={6}>
+          <Col lg={6} md={24} xs={24}>
             <CardItem
               key={el.id}
               title={el.title}

@@ -97,7 +97,7 @@ const SectionComputer = (props) => {
   return (
     <div className="section-review-inner">
       <Row gutter={30}>
-        <Col span={12}>
+        <Col lg={12} md={12} xs={24}>
           <CardItemReview
             label="Laptop"
             titleTop="Những máy tính xách tay tốt nhất để mua vào năm 2021"
@@ -107,7 +107,7 @@ const SectionComputer = (props) => {
             href="#"
           />
         </Col>
-        <Col span={12}>
+        <Col lg={12} md={12} xs={24}>
           <CardItemReview
             label="Máy tính"
             titleTop="Máy tính all in one để bàn tốt nhất cho năm 2021"

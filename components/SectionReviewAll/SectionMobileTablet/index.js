@@ -95,7 +95,7 @@ const SectionMobileTablet = (props) => {
   return (
     <div className="section-review-inner">
       <Row gutter={30}>
-        <Col span={12}>
+        <Col lg={12} md={12} xs={24}>
           <CardItemReview
             label="Điện thoại"
             titleTop="Điện thoại tốt nhất năm 2021"
@@ -105,7 +105,7 @@ const SectionMobileTablet = (props) => {
             href="#"
           />
         </Col>
-        <Col span={12}>
+        <Col lg={12} md={12} xs={24}>
           <CardItemReview
             label="Máy tính bảng"
             titleTop="Máy tính bảng tốt nhất năm 2021"

@@ -47,7 +47,7 @@ const SectionComputer = (props) => {
     <div className="section-new">
       <Title label="Máy tính" />
       <Row gutter={30}>
-        <Col span={10}>
+        <Col lg={10} xs={24} md={24}>
           {listCard.map((item) => (
             <CardItemHorizontal
               key={item.id}
@@ -55,25 +55,25 @@ const SectionComputer = (props) => {
               imgSrc={item.imgSrc}
             />
           ))}
-          <ReadMore href="/tin-tuc"/>
+          <ReadMore href="/tin-tuc" />
         </Col>
-        <Col span={14}>
+        <Col  className="is-mobile" lg={14} xs={24} md={24}>
           <Row>
-            <Col span={24}>
+            <Col lg={24} xs={24} md={24}>
               <CardItem
                 title="Tra tấn iPhone 13 Pro Max: Mặt kính Ceramic Shield, khung thép có giúp thiết bị sống sót?"
                 author=""
                 ImageSrc="/static/assets/img/section-new/tin-moi-right_1.png"
               />
             </Col>
-            <Col span={12} className="section-new-inner-left">
+            <Col lg={12} xs={24} md={24} className="section-new-inner-left">
               <CardItem
                 title="Hình ảnh mới của Samsung Galaxy S22 Ultra với cụm camera độc nhất thị trường"
                 author=""
                 ImageSrc="/static/assets/img/section-new/tin-moi-right_2.png"
               />
             </Col>
-            <Col span={12} className="section-new-inner-right">
+            <Col lg={12} xs={24} md={24} className="section-new-inner-right">
               <CardItem
                 title="3 chiếc iPhone chính hãng có giá rẻ nhất trong tháng 10, vẫn được khách Việt ưa chuộng"
                 author=""
