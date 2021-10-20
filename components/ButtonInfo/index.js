@@ -8,6 +8,7 @@ import router from "next/router";
 const propTypes = {};
 
 const ButtonInfo = (props) => {
+  const { isMobile = false } = props;
   //! State
   const dispatch = useDispatch();
   const [visible, setVisible] = useState(false);
@@ -31,7 +32,11 @@ const ButtonInfo = (props) => {
   return (
     <div className="button-user">
       <Button onClick={showDrawer}>
-        <img src="/static/assets/img/icon/avanho.png" />
+        {isMobile ? (
+          `Tài khoản`
+        ) : (
+          <img src="/static/assets/img/icon/avanho.png" />
+        )}
       </Button>
       <Drawer
         title="Xin chào, Nam Do!"

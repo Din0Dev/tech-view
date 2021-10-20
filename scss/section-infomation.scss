@@ -12,6 +12,7 @@
         min-height: 72px;
         max-width: 200px;
         background-image: url("/static/assets/img/tech-view-logo_color.svg");
+
       }
       .header-navbar-right {
         align-items: center;
@@ -26,6 +27,12 @@
       .ant-tabs-tab {
         color: $grey-color;
         font-size: 17px;
+        @include xs {
+          font-size: 14px;
+        }
+        @include md {
+          font-size: 14px;
+        }
       }
       .ant-tabs-tab-active {
         background: $white-color;
@@ -39,6 +46,12 @@
       .tab-infomation-activity {
         padding: 15px;
         font-size: 18px;
+        @include xs {
+          font-size: 13px;
+        }
+        @include md {
+          font-size: 13px;
+        }
         .ant-row {
           text-align: center;
           .tab-infomation-seen {
@@ -51,7 +64,21 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        .title-custom{
+          @include xs {
+            font-size: 18px;
+          }
+          @include md {
+            font-size: 18px;
+          }
+        }
         .btn-edit {
+          @include xs {
+            font-size: 18px;
+          }
+          @include md {
+            font-size: 18px;
+          }
           font-size: 20px;
           border: none;
           background: transparent;
@@ -63,9 +90,27 @@
         display: flex;
         justify-content: center;
         margin: 30px 0;
+        @include xs {
+          img{
+            max-width: 150px;
+            margin: auto;
+          }
+        }
+        @include md {
+          img{
+            max-width: 150px;
+            margin: auto;
+          }
+        }
       }
       .tab-infomation-form {
         width: 60%;
+        @include xs {
+          width: 90%;
+        }
+        @include md {
+          width: 90%;
+        }
         margin: auto;
         .input-custom {
           display: flex;

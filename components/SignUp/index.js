@@ -17,12 +17,12 @@ const SignUp = (props) => {
   return (
     <div className="sign-in">
       <Row>
-        <Col className="sign-in-img" span={8}>
+        <Col className="sign-in-img" lg={8} md={24} xs={24}>
           <Link href="/">
             <img src="/static/assets/img/tech-view-logo_white.svg" />
           </Link>
         </Col>
-        <Col className="sign-in-form" span={16}>
+        <Col className="sign-in-form" lg={16} md={24} xs={24}>
           <FormSign label="Đăng ký" isSignUp={true} />
         </Col>
       </Row>

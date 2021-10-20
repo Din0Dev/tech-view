@@ -186,7 +186,7 @@ const SectionDesCription = (props) => {
         customComponent={
           <Row gutter={30}>
             {listItem.map((el) => (
-              <Col span={8}>
+              <Col lg={8} md={8} xs={12}>
                 <CardItem
                   key={el.id}
                   title={el.title}

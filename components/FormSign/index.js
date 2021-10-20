@@ -97,6 +97,13 @@ const FormSign = (props) => {
       >
         <p>{modalText}</p>
       </Modal>
+      <Link href="/">
+        <img
+         className="is-not-mobile"
+          src="/static/assets/img/tech-view-logo_color.svg"
+          style={{ width: 300 }}
+        />
+      </Link>
       <Title label={label} />
       <div className="form-login-social">
         <a

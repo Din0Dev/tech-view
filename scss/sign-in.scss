@@ -10,6 +10,12 @@
     margin: auto;
   }
   .sign-in-img {
+    @include xs {
+      display: none;
+    }
+    @include md {
+      display: none;
+    }
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,6 +31,12 @@
     text-align: center;
     background: $white-color;
     border-radius: 20px 0 0 20px;
+    @include xs{
+      border-radius: 0;
+    }
+    @include md{
+      border-radius: 0;
+    }
   }
 }
 //

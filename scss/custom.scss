@@ -11,6 +11,16 @@ body {
   @include md {
     background: $white-color;
   }
+  .is-not-mobile {
+    display: none;
+    @include xs {
+      display: inline;
+    }
+    @include md {
+      display: inline;
+    }
+  }
+
   .is-mobile {
     @include xs {
       display: none;
@@ -22,6 +32,10 @@ body {
   margin: 0;
   padding: 0;
   .drawer-menu {
+    .menu-user{
+      display: flex;
+      justify-content: center;
+    }
     .ant-drawer-header {
       border-bottom: 2px solid $grey-color;
     }
@@ -311,12 +325,6 @@ h5 {
     h5 {
       font-family: SFProBold;
       color: white !important;
-      @include xs {
-        font-size: 25px;
-      }
-      @include md {
-        font-size: 16px;
-      }
     }
     p {
       font-size: 24px;
@@ -337,28 +345,41 @@ h5 {
       font-size: $fz20;
       padding-right: 15px;
       list-style: none;
+      @include xs {
+        font-size: 16px;
+      }
+      @include md {
+        font-size: 16px;
+      }
+      a {
+        color: $white-color;
+      }
     }
     .social {
+      h3 {
+        font-size: 30px;
+      }
+      font-size: 30px;
       padding: 30px 0;
-      img {
-        margin-right: 18px;
-        width: 24px;
-        height: 24px;
-        color: $white-color;
+      svg {
+        margin-right: 10px;
       }
     }
   }
   //
   .CardItem-Custom,
   .CardItemVideo-Custom {
+    cursor: pointer;
     .ant-card {
       border: none;
-      img {
+      .ant-card-cover {
         @include xs {
           height: 300px;
+          overflow: hidden;
         }
         @include md {
           height: 300px;
+          overflow: hidden;
         }
       }
     }
@@ -380,6 +401,22 @@ h5 {
           @include md {
             font-size: 10px;
           }
+        }
+      }
+    }
+  }
+  .CardItemVideo-Custom {
+    cursor: pointer;
+    .ant-card {
+      border: none;
+      .ant-card-cover {
+        @include xs {
+          height: 150px;
+          overflow: hidden;
+        }
+        @include md {
+          height: 150px;
+          overflow: hidden;
         }
       }
     }
@@ -411,6 +448,7 @@ h5 {
   }
   //
   .card-item-horizontal {
+    cursor: pointer;
     padding-bottom: 30px;
     .ant-card {
       border: none;
@@ -421,6 +459,8 @@ h5 {
       padding: 0;
     }
     .card-item-horizontal-img {
+      width: 100%;
+      overflow: hidden;
       img {
         width: 100%;
       }

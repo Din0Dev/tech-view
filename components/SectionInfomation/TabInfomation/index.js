@@ -25,31 +25,31 @@ const TabInfomation = (props) => {
       <div className="tab-infomation-form">
         <Form>
           <Row gutter={30}>
-            <Col span={12}>
+            <Col lg={12} md={12} xs={24}>
               <Form.Item label="Tên" className="input-custom">
                 <Input placeholder="input placeholder" value="Nam" />
               </Form.Item>
             </Col>
-            <Col span={12}>
+            <Col lg={12} md={12} xs={24}>
               <Form.Item label="Họ" className="input-custom">
                 <Input placeholder="input placeholder" value="Do" />
               </Form.Item>
             </Col>
           </Row>
           <Row gutter={30}>
-            <Col span={12}>
+            <Col lg={12} md={12} xs={24}>
               <Form.Item label="Giới tính" className="input-custom">
                 <Input placeholder="input placeholder" value="Nam" />
               </Form.Item>
             </Col>
-            <Col span={12}>
+            <Col lg={12} md={12} xs={24}>
               <Form.Item label="Năm sinh" className="input-custom">
                 <Input placeholder="input placeholder" value="1998" />
               </Form.Item>
             </Col>
           </Row>
           <Row gutter={30}>
-            <Col span={12}>
+            <Col lg={12} md={12} xs={24}>
               <Form.Item label="Nick name" className="input-custom">
                 <Input placeholder="input placeholder" value="NamDo" />
               </Form.Item>

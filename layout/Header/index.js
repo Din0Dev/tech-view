@@ -148,7 +148,7 @@ const HeaderLayout = (props) => {
             {isLogin ? <ButtonInfo /> : <ButtonUser />}
           </div>
           <div className="header-navbar-right-button-mobile">
-            <NavbarM />
+            <NavbarM isLogin={isLogin}/>
           </div>
         </div>
       </div>

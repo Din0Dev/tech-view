@@ -5,10 +5,13 @@ import Menu from "rc-menu/lib/Menu";
 import { Button, Drawer, Dropdown, Input, Row } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import Link from "next/link";
+import ButtonUser from "components/ButtonUser";
+import ButtonInfo from "components/ButtonInfo";
 const propTypes = {};
 
 const NavbarM = (props) => {
-  const { Search} = Input;
+  const { isLogin = false } = props;
+  const { Search } = Input;
   //! State
   const dispatch = useDispatch();
   const [visible, setVisible] = useState(false);
@@ -185,6 +188,13 @@ const NavbarM = (props) => {
           </ul>
         </div>
         {/*  */}
+        <div className="menu-user">
+          {isLogin ? (
+            <ButtonInfo isMobile={true} />
+          ) : (
+            <ButtonUser isMobile={true} />
+          )}
+        </div>
       </Drawer>
     </div>
   );

@@ -2,27 +2,38 @@ import React from "react";
 import Link from "next/link";
 import { Footer } from "antd/lib/layout/layout";
 import { Col, Row } from "antd";
+import {
+  FacebookOutlined,
+  InstagramOutlined,
+  YoutubeOutlined,
+} from "@ant-design/icons";
 
 const FooterLayout = (props) => {
   return (
     <Footer className="footer-custom" style={{ textAlign: "center" }}>
       <Row>
-        <Col span={16}>
+        <Col lg={16} md={24} xs={24}>
           <h3>TECHVIEW</h3>
           <ul>
-            <li>Home</li>
-            <li>Tech</li>
-            <li>Reviews</li>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/tin-tuc">Tech</Link>
+            </li>
+            <li>
+              <Link href="/review-all">Reviews</Link>
+            </li>
             <li>Life</li>
             <li>How-to?</li>
           </ul>
         </Col>
-        <Col span={8}>
+        <Col lg={8} md={24} xs={24}>
           <p>FOLLOW</p>
           <div className="social">
-            <img src="/static/assets/img/icon/lg.png" />
-            <img src="/static/assets/img/icon/insta.svg" />
-            <img src="/static/assets/img/icon/youtube.svg" />
+            <FacebookOutlined />
+            <InstagramOutlined />
+            <YoutubeOutlined />
           </div>
         </Col>
       </Row>

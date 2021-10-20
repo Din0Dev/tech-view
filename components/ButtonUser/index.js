@@ -8,6 +8,7 @@ import { logout } from "redux/actions";
 const propTypes = {};
 
 const ButtonUser = (props) => {
+  const { isMobile = false } = props;
   //! State
   const dispatch = useDispatch();
   const [visible, setVisible] = useState(false);
@@ -23,7 +24,11 @@ const ButtonUser = (props) => {
   return (
     <div className="button-user">
       <Button onClick={showDrawer}>
-        <img src="/static/assets/img/icon/use.svg" />
+        {isMobile ? (
+          `Đăng nhập/Đăng ký`
+        ) : (
+          <img src="/static/assets/img/icon/use.svg" />
+        )}
       </Button>
       <Drawer
         title="User Manager"
