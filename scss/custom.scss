@@ -32,7 +32,7 @@ body {
   margin: 0;
   padding: 0;
   .drawer-menu {
-    .menu-user{
+    .menu-user {
       display: flex;
       justify-content: center;
     }
@@ -189,6 +189,25 @@ h5 {
       width: 90%;
     }
   }
+  .header-tag {
+    .checkable-tag {
+      margin: auto;
+      width: 70%;
+      @include xs {
+        width: 100%;
+      }
+      @include md {
+        width: 100%;
+      }
+    }
+    width: 100%;
+    margin: auto;
+    background: $white-color;
+    padding: 21px 0;
+    .checkable-tag {
+      font-size: 16px;
+    }
+  }
   .header-custom {
     border-bottom: 2px solid $black-color;
     background: $white-color;
@@ -233,6 +252,7 @@ h5 {
       }
     }
     .header-navbar {
+      background: $white-color;
       @include xs {
         width: 100%;
       }
