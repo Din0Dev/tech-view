@@ -19,7 +19,7 @@ const DefaultLayout = ({ children }) => {
   return (
     <Layout className="layout-custom">
       <HeaderLayout />
-      <Content style={{ marginTop: 72 }}>
+      <Content style={{ marginTop: 60 }}>
         <div className="header-tag">
           <CheckableTagCommon />
         </div>

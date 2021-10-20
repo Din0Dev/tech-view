@@ -211,18 +211,18 @@ h5 {
   .header-custom {
     border-bottom: 2px solid $black-color;
     background: $white-color;
-    height: 72px;
+    height: 60px;
     cursor: pointer;
     .logo {
       width: 100%;
-      min-height: 72px;
+      min-height: 60px;
       max-width: 200px;
       background-image: url("/static/assets/img/tech-view-logo_color.svg");
       background-repeat: no-repeat;
       background-position: center;
     }
     > div {
-      height: 70px;
+      height: 58px;
     }
     ul {
       width: 100%;
