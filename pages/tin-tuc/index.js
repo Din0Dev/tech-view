@@ -22,6 +22,7 @@ const NewsPage = (props) => {
   //! Render
   return (
     <DefaultLayout>
+      <div className="section-new">
       <SectionTop />
       <SectionAttention />
       <SectionTrending />
@@ -30,6 +31,7 @@ const NewsPage = (props) => {
       <SectionGames />
       <SectionCar />
       <SectionMore />
+      </div>
     </DefaultLayout>
   );
 };

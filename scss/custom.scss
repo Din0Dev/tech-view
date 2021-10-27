@@ -191,21 +191,22 @@ h5 {
   }
   .header-tag {
     .checkable-tag {
+      font-size: 16px;
       margin: auto;
       width: 70%;
       @include xs {
         width: 100%;
       }
       @include md {
-        width: 100%;
+        width: 80%;
       }
     }
     width: 100%;
     margin: auto;
     background: $white-color;
     padding: 21px 0;
-    .checkable-tag {
-      font-size: 16px;
+    @include md{
+      padding: 10px 0;
     }
   }
   .header-custom {

@@ -1,8 +1,13 @@
-.section-news-mobile-top{
-  .ant-card{
+.section-news-mobile-top, .section-mobile{
+  .ant-card {
     background: transparent;
-    .ant-card-meta-title{
+    .ant-card-cover {
+      @include xs {
+        height: 185px !important;
+      }
+    }
+    .ant-card-meta-title {
       font-size: 30px;
-  }
+    }
   }
 }

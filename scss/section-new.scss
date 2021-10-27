@@ -12,4 +12,14 @@
   .section-new-inner-right {
     padding-left: 15px;
   }
+  .CardItem-Custom{
+    .ant-card {
+      border: none;
+      .ant-card-cover{
+        @include xs{
+          height: 185px;
+        }
+      }
+    }
+  }
 }
