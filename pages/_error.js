@@ -13,9 +13,9 @@ const ErrorPage = (props) => {
   //! Render
   return (
     <div className="error-page">
-      <div className="err-page-bg">
+      {/* <div className="err-page-bg">
         <img src="/static/assets/img/back404.png" />
-      </div>
+      </div> */}
       <div className="err-page-inner">
         <div className="err-oops">Ooops...</div>
         <div className="err-page-not-found">Page not found</div>

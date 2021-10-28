@@ -97,7 +97,7 @@ const SectionMore = (props) => {
       <Title label="Xem thêm đánh giá" />
       <Row gutter={30}>
         {listItem.map((el) => (
-          <Col span={12}>
+          <Col lg={12} md={24} xs={24}>
             <CardItemHorizontal
               isReverse={true}
               key={el.id}

@@ -77,7 +77,7 @@ const SectionTop = (props) => {
           />
         </Col>
         {listItemTop.map((el) => (
-          <Col lg={6} md={12} xs={12}>
+          <Col lg={6} md={12} xs={12} className="section-view-item">
             <CardItem
               key={el.id}
               title={el.title}

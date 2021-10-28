@@ -28,7 +28,7 @@ const CardItemNewsWithOneTop = ({
     <div className="card-item-news">
       <Title label={label} />
       <Row gutter={30}>
-        <Col className="card-item-news-left" span={12}>
+        <Col className="card-item-news-left" lg={12} md={24} xs={24}>
           <CardItem title={itemLeft1} ImageSrc={imageSrcLeft1} author="" />
           {listItemLeft.map((el) => (
             <CardItemHorizontal
@@ -42,7 +42,7 @@ const CardItemNewsWithOneTop = ({
             />
           ))}
         </Col>
-        <Col className="card-item-news-right" span={12}>
+        <Col className="card-item-news-right" lg={12} md={24} xs={24}>
           <CardItem title={itemRight1} ImageSrc={imageSrcRight1} author="" />
           {listItemRight.map((el) => (
             <CardItemHorizontal

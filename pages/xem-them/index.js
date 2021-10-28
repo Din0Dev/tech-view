@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import SectionSeeMore from "components/SectionSeeMore";
+import DefaultLayout from "layout/DefaultLayout";
 
 const propTypes = {};
 
@@ -13,9 +14,11 @@ const SeeMorePage = (props) => {
 
   //! Render
   return (
-    <div className="section-see-more">
-      <SectionSeeMore />
-    </div>
+    <DefaultLayout>
+      <div className="section-see-more">
+        <SectionSeeMore />
+      </div>
+    </DefaultLayout>
   );
 };
 
