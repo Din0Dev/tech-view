@@ -6,10 +6,12 @@ import { BarsOutlined, HistoryOutlined, UserOutlined } from "@ant-design/icons";
 import TabInfomation from "../TabInfomation";
 import TabActivity from "../TabActivity";
 import TabOptions from "../TabOptions";
+import { isMobile } from "react-device-detect";
 
 const propTypes = {};
 
 const ContainerInfomation = (props) => {
+  console.log(isMobile);
   //! State
   const { TabPane } = Tabs;
   //! Function
@@ -31,7 +33,7 @@ const ContainerInfomation = (props) => {
   //! Render
   return (
     <div className="container-infomation">
-      <Tabs tabPosition={"left"}>
+      <Tabs tabPosition={isMobile ? "top" : "left"}>
         <TabPane tab={titleInfomation} key="1">
           <TabInfomation />
         </TabPane>

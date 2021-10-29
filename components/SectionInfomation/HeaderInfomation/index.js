@@ -22,7 +22,10 @@ const HeaderInfomation = (props) => {
           </Link>
         </Col>
         <Col span={12} className="header-navbar-right">
-          <img src="/static/assets/img/icon/avanho.png" />
+          <img
+            className="is-mobile"
+            src="/static/assets/img/icon/avanho.png"
+          />
           <Button>Trợ giúp</Button>
         </Col>
       </Row>

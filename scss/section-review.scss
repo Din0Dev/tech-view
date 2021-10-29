@@ -1,0 +1,42 @@
+.section-review-inner,
+.review-tv-page {
+  .CardItem-Custom {
+    > div {
+      background: transparent;
+    }
+  }
+}
+.review-tv-page {
+  .CardItem-Custom {
+    .ant-card {
+      .ant-card-cover {
+        @include xs {
+          height: 150px;
+        }
+      }
+    }
+  }
+  .section-news-rate {
+    .card-item-horizontal-title {
+      font-weight: bold;
+      padding-bottom: 30px;
+      @include xs {
+        padding: 0;
+      }
+    }
+    .ant-row {
+      > div {
+        padding-right: 20px;
+        @include xs {
+          padding: 0;
+        }
+      }
+      .card-item-horizontal-author,
+      .ant-rate {
+        @include xs {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

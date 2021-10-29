@@ -12,7 +12,10 @@
         min-height: 72px;
         max-width: 200px;
         background-image: url("/static/assets/img/tech-view-logo_color.svg");
-
+        background-repeat: no-repeat;
+        @include xs{
+          background-position: center;
+        }
       }
       .header-navbar-right {
         align-items: center;
@@ -24,6 +27,10 @@
       }
     }
     .container-infomation {
+      @include xs{
+        width: 95%;
+        margin: auto;
+      }
       .ant-tabs-tab {
         color: $grey-color;
         font-size: 17px;
@@ -92,13 +99,13 @@
         margin: 30px 0;
         @include xs {
           img{
-            max-width: 150px;
+            max-width: 100px;
             margin: auto;
           }
         }
         @include md {
           img{
-            max-width: 150px;
+            max-width: 100px;
             margin: auto;
           }
         }
