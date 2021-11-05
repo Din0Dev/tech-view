@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import { Col, Row } from "antd";
 import CardItemReview from "components/CardItemReview";
+import { randomDate } from "../../../utils/randomDate";
+import { randomRate } from "../../../utils/randomRate";
 
 const propTypes = {};
 
@@ -14,8 +16,8 @@ const SectionComputer = (props) => {
       id: 1,
       isRate: true,
       isAuthor: true,
-      rate: 5,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title: "Đánh giá Microsoft Surface Laptop Studio: Kỳ lạ và tuyệt vời",
       imgSrc: "/static/assets/img/review-all/laptop_2.png",
     },
@@ -23,8 +25,8 @@ const SectionComputer = (props) => {
       id: 2,
       isRate: true,
       isAuthor: true,
-      rate: 5,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Đánh giá Lenovo ThinkPad P15 Gen 2: Máy trạm di động trường học cũ",
       imgSrc: "/static/assets/img/review-all/laptop_3.png",
@@ -33,8 +35,8 @@ const SectionComputer = (props) => {
       id: 3,
       isRate: true,
       isAuthor: true,
-      rate: 3,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Lenovo ThinkPad X1 Extreme Gen 4 Đánh giá: Nhanh nhưng không hoàn hảo",
       imgSrc: "/static/assets/img/review-all/laptop_4.png",
@@ -43,8 +45,8 @@ const SectionComputer = (props) => {
       id: 4,
       isRate: true,
       isAuthor: true,
-      rate: 4,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title: "Đánh giá OLED Dell XPS 15: Tốt nhất tiếp tục trở nên tốt hơn",
       imgSrc: "/static/assets/img/review-all/laptop_5.png",
     },
@@ -54,8 +56,8 @@ const SectionComputer = (props) => {
       id: 1,
       isRate: true,
       isAuthor: true,
-      rate: 5,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Đánh giá Apple iPad Pro 12,9 inch (2021): Nhiều hơn bạn cần, chính xác những gì bạn muốn",
       imgSrc: "/static/assets/img/review-all/pc_2.png",
@@ -64,8 +66,8 @@ const SectionComputer = (props) => {
       id: 2,
       isRate: true,
       isAuthor: true,
-      rate: 5,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Đánh giá Razer Huntsman V2 TKL: Một lập luận thuyết phục cho bàn phím có dây",
       imgSrc: "/static/assets/img/review-all/pc_3.png",
@@ -74,8 +76,8 @@ const SectionComputer = (props) => {
       id: 3,
       isRate: true,
       isAuthor: true,
-      rate: 3,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Đánh giá Dell 32 4K USB-C Hub Monitor: Hoàn hảo kết nối 4K thuận tiện",
       imgSrc: "/static/assets/img/review-all/pc_4.png",
@@ -84,8 +86,8 @@ const SectionComputer = (props) => {
       id: 4,
       isRate: true,
       isAuthor: true,
-      rate: 4,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Marsback Zephyr Pro đánh giá: Một con chuột tuyệt vời đến nỗi nó có quạt bên trong",
       imgSrc: "/static/assets/img/review-all/pc_5.png",

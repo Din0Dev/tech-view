@@ -2,6 +2,8 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import CardItemNewsWithOneTop from "components/CardItemNewsWithOneTop";
+import { randomDate } from "utils/randomDate";
+import { randomRate } from "../../../utils/randomRate";
 
 const propTypes = {};
 
@@ -17,8 +19,8 @@ const SectionTablet = (props) => {
       imgSrc: "/static/assets/img/tin-tuc-mobile/tablet_3.png",
       isAuthor: true,
       isRate: true,
-      rate: 5,
-      author: "By Namdo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
     },
     {
       id: 2,
@@ -26,8 +28,8 @@ const SectionTablet = (props) => {
       imgSrc: "/static/assets/img/tin-tuc-mobile/tablet_4.png",
       isAuthor: true,
       isRate: true,
-      rate: 5,
-      author: "By Namdo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
     },
     {
       id: 3,
@@ -35,8 +37,8 @@ const SectionTablet = (props) => {
       imgSrc: "/static/assets/img/tin-tuc-mobile/tablet_5.png",
       isAuthor: true,
       isRate: true,
-      rate: 4,
-      author: "By Namdo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
     },
   ];
   const listItemRight = [
@@ -47,8 +49,8 @@ const SectionTablet = (props) => {
       imgSrc: "/static/assets/img/tin-tuc-mobile/tablet_6.png",
       isAuthor: true,
       isRate: true,
-      rate: 4,
-      author: "By Namdo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
     },
     {
       id: 2,
@@ -56,8 +58,8 @@ const SectionTablet = (props) => {
       imgSrc: "/static/assets/img/tin-tuc-mobile/tablet_7.png",
       isAuthor: true,
       isRate: true,
-      rate: 5,
-      author: "By Namdo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
     },
     {
       id: 3,
@@ -65,8 +67,8 @@ const SectionTablet = (props) => {
       imgSrc: "/static/assets/img/tin-tuc-mobile/tablet_8.png",
       isAuthor: true,
       isRate: true,
-      rate: 5,
-      author: "By Namdo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
     },
   ];
 

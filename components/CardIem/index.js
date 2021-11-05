@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Link from "next/link";
 import { Card, Rate } from "antd";
 import Meta from "antd/lib/card/Meta";
+import { randomDate } from "../../utils/randomDate";
 
 const propTypes = {
   title: PropTypes.string,
@@ -22,7 +23,7 @@ const CardItem = (props) => {
     width = "100%",
     className = "",
     href = "/noi-dung",
-    author = "by NamDo",
+    author = `by NamDo - ${randomDate()}`,
     isRate = false,
     rate = 5,
   } = props;

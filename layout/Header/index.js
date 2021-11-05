@@ -21,27 +21,27 @@ const HeaderLayout = (props) => {
     <Row>
       <Menu>
         <Menu.Item>
-          <a rel="noopener noreferrer" href="/">
+          <a rel="noopener noreferrer" href="/tin-tuc#tin-tuc-mobile">
             Điện thoại
           </a>
         </Menu.Item>
         <Menu.Item>
-          <a rel="noopener noreferrer" href="/">
+          <a rel="noopener noreferrer" href="/tin-tuc#tin-tuc-may-tinh">
             Máy tính
           </a>
         </Menu.Item>
         <Menu.Item>
-          <a rel="noopener noreferrer" href="/">
+          <a rel="noopener noreferrer" href="/tin-tuc#tin-tuc-game">
             Gaming
           </a>
         </Menu.Item>
         <Menu.Item>
-          <a rel="noopener noreferrer" href="/">
+          <a rel="noopener noreferrer" href="/tin-tuc#tin-tuc-xe">
             Xe
           </a>
         </Menu.Item>
         <Menu.Item>
-          <a rel="noopener noreferrer" href="/">
+          <a rel="noopener noreferrer" href="/tin-tuc">
             All
           </a>
         </Menu.Item>
@@ -53,22 +53,22 @@ const HeaderLayout = (props) => {
     <Row>
       <Col className="review-left" span={12}>
         <Menu.Item>
-          <a rel="noopener noreferrer" href="/">
+          <a rel="noopener noreferrer" href="/review-all#danh-gia-dien-thoai-mtb">
             Điện thoại
           </a>
         </Menu.Item>
         <Menu.Item>
-          <a rel="noopener noreferrer" href="/">
+          <a rel="noopener noreferrer" href="/review-all#danh-gia-dien-thoai-mtb">
             Máy tính bảng
           </a>
         </Menu.Item>
         <Menu.Item>
-          <a rel="noopener noreferrer" href="/">
+          <a rel="noopener noreferrer" href="/review-all#danh-gia-laptop-pc">
             Laptop
           </a>
         </Menu.Item>
         <Menu.Item>
-          <a rel="noopener noreferrer" href="/m">
+          <a rel="noopener noreferrer" href="/review-all#danh-gia-laptop-pc">
             Máy tính
           </a>
         </Menu.Item>
@@ -86,13 +86,13 @@ const HeaderLayout = (props) => {
           </Link>
         </Menu.Item>
         <Menu.Item>
-          <a rel="noopener noreferrer">Loa</a>
+          <a rel="noopener noreferrer" href="/review-all#danh-gia-them">Loa</a>
         </Menu.Item>
         <Menu.Item>
-          <a rel="noopener noreferrer">Tai nghe</a>
-        </Menu.Item>
+          <a rel="noopener noreferrer" href="/review-all#danh-gia-them">Tai nghe</a>
+        </Menu.Item>  
         <Menu.Item>
-          <a rel="noopener noreferrer">Đồng hồ thông minh</a>
+          <a rel="noopener noreferrer" href="/review-all#danh-gia-them">Đồng hồ thông minh</a>
         </Menu.Item>
       </Col>
     </Row>
@@ -119,7 +119,7 @@ const HeaderLayout = (props) => {
                 placement="bottomLeft"
                 trigger={["click"]}
               >
-                <button onClick={(e) => e.preventDefault()}>Tech</button>
+                <button onClick={(e) => e.preventDefault()}>Tin tức</button>
               </Dropdown>
             </Menu.Item>
             <Menu.Item key="3">
@@ -129,7 +129,7 @@ const HeaderLayout = (props) => {
                 placement="bottomLeft"
                 trigger={["click"]}
               >
-                <button onClick={(e) => e.preventDefault()}>Reviews</button>
+                <button onClick={(e) => e.preventDefault()}>Đánh giá</button>
               </Dropdown>
             </Menu.Item>
             <Menu.Item key="4">

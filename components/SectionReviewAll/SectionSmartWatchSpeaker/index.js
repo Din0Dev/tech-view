@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import { Col, Row } from "antd";
 import CardItemReview from "components/CardItemReview";
+import { randomDate } from "utils/randomDate";
+import { randomRate } from "../../../utils/randomRate";
 
 const propTypes = {};
 
@@ -14,8 +16,8 @@ const SectionSmartWatchSpeaker = (props) => {
       id: 1,
       isRate: true,
       isAuthor: true,
-      rate: 5,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title: "Đánh giá loa Sony SRS-RA5000: Một thử nghiệm đắt tiền",
       imgSrc: "",
     },
@@ -23,8 +25,8 @@ const SectionSmartWatchSpeaker = (props) => {
       id: 2,
       isRate: true,
       isAuthor: true,
-      rate: 5,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Harman / Kardon Soundsticks 4 đánh giá: Những gì cũ là mới một lần nữa",
       imgSrc: "",
@@ -33,8 +35,8 @@ const SectionSmartWatchSpeaker = (props) => {
       id: 3,
       isRate: true,
       isAuthor: true,
-      rate: 3,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Đánh giá Marshall Stanmore II ",
       imgSrc: "",
@@ -43,8 +45,8 @@ const SectionSmartWatchSpeaker = (props) => {
       id: 4,
       isRate: true,
       isAuthor: true,
-      rate: 4,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title: "Sonos Roam đánh giá: Loa nhỏ, có võ",
       imgSrc: "",
     },
@@ -54,8 +56,8 @@ const SectionSmartWatchSpeaker = (props) => {
       id: 1,
       isRate: true,
       isAuthor: true,
-      rate: 5,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Đánh giá Samsung Galaxy Watch 4: Đồng hồ thông minh Wear OS tốt nhất cho cổ tay nhỏ",
       imgSrc: "",
@@ -64,8 +66,8 @@ const SectionSmartWatchSpeaker = (props) => {
       id: 2,
       isRate: true,
       isAuthor: true,
-      rate: 5,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Đánh giá Samsung Galaxy Watch 4 Classic: Đồng hồ thông minh hạng nhất",
       imgSrc: "",
@@ -74,8 +76,8 @@ const SectionSmartWatchSpeaker = (props) => {
       id: 3,
       isRate: true,
       isAuthor: true,
-      rate: 3,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Oppo Band đánh giá: Thiết bị đeo thể dục đầu tiên của Oppo không hấp dẫn",
       imgSrc: "",
@@ -84,8 +86,8 @@ const SectionSmartWatchSpeaker = (props) => {
       id: 4,
       isRate: true,
       isAuthor: true,
-      rate: 4,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Đánh giá Fitbit Versa 3: Máy theo dõi thể dục hoàn hảo hàng ngày",
       imgSrc: "",

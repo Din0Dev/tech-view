@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import { Card, Col, Row, Rate } from "antd";
 import Link from "next/link";
+import { randomDate } from "../../utils/randomDate";
+import { randomRate } from "../../utils/randomRate";
 const propTypes = {
   title: PropTypes.string,
   imgSrc: PropTypes.string,
@@ -22,8 +24,8 @@ const CardItemHorizontal = (props) => {
     isRate = false,
     isAuthor = false,
     isReverse = false,
-    rate = 5,
-    author = "By NamDo",
+    rate = randomRate(),
+    author = `By NamDo - ${randomDate()}`,
     href = "/noi-dung",
   } = props;
   //! State

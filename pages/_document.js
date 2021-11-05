@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
 				<Head>
 					<meta charSet="utf-8" />
 					<meta content="IE=edge" />
-					<link rel="shortcut icon" href="/static/assets/favicon.jpg" />
+					<link rel="shortcut icon" href="/static/assets/favicon.png" />
 				</Head>
 				<body>
 					<Main />

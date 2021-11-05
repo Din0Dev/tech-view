@@ -3,12 +3,12 @@ import { useSelector, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import Title from "components/Title";
 import { Card, Col, Row } from "antd";
-
+import { randomDate } from "../../utils/randomDate";
 const propTypes = {};
 
 const CardItemNewsMobile = ({
   category = "category",
-  createAt = "1 hour ago",
+  createAt = `${randomDate()}`,
   description = "description",
 }) => {
   //! State

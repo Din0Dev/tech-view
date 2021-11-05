@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import { Col, Row } from "antd";
 import CardItemReview from "components/CardItemReview";
+import { randomDate } from "../../../utils/randomDate";
+import { randomRate } from "../../../utils/randomRate";
 
 const propTypes = {};
 
@@ -14,8 +16,8 @@ const SectionCarHeadPhone = (props) => {
       id: 1,
       isRate: true,
       isAuthor: true,
-      rate: 5,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title: "Đánh giá Hyundai Tucson Hybrid Limited AWD 2022: Thêm sức mạnh và hiệu quả",
       imgSrc: "/static/assets/img/review-all/car_2.png",
     },
@@ -23,8 +25,8 @@ const SectionCarHeadPhone = (props) => {
       id: 2,
       isRate: true,
       isAuthor: true,
-      rate: 5,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Đánh giá Kia K5 2.5 GT 2021: Một kỷ nguyên mới",
       imgSrc: "/static/assets/img/review-all/car_3.png",
@@ -33,8 +35,8 @@ const SectionCarHeadPhone = (props) => {
       id: 3,
       isRate: true,
       isAuthor: true,
-      rate: 3,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Đánh giá Toyota Venza 2021: Star gazer",
       imgSrc: "/static/assets/img/review-all/car_4.png",
@@ -43,8 +45,8 @@ const SectionCarHeadPhone = (props) => {
       id: 4,
       isRate: true,
       isAuthor: true,
-      rate: 4,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title: "Đánh giá Volkswagen Arteon 2021: Sự sang trọng của Đức cho tất cả mọi người",
       imgSrc: "/static/assets/img/review-all/car_5.png",
     },
@@ -54,8 +56,8 @@ const SectionCarHeadPhone = (props) => {
       id: 1,
       isRate: true,
       isAuthor: true,
-      rate: 5,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Đánh giá Edifier NeoBuds Pro: Một tiêu chuẩn mới trong âm thanh giá cả phải chăng",
       imgSrc: "/static/assets/img/review-all/hp_2.png",
@@ -64,8 +66,8 @@ const SectionCarHeadPhone = (props) => {
       id: 2,
       isRate: true,
       isAuthor: true,
-      rate: 5,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Đánh giá Sony WF-1000XM4: Tai nghe không dây gần như hoàn hảo",
       imgSrc: "/static/assets/img/review-all/hp_3.png",
@@ -74,8 +76,8 @@ const SectionCarHeadPhone = (props) => {
       id: 3,
       isRate: true,
       isAuthor: true,
-      rate: 3,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Đánh giá Beats Studio Buds: Đây là AirPods Pro Lite",
       imgSrc: "/static/assets/img/review-all/hp_4.png",
@@ -84,8 +86,8 @@ const SectionCarHeadPhone = (props) => {
       id: 4,
       isRate: true,
       isAuthor: true,
-      rate: 4,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Corsair Virtuoso RGB Wireless XT đánh giá: Một tai nghe tốt ngoài chơi game",
       imgSrc: "/static/assets/img/review-all/hp_5.png",

@@ -23,14 +23,22 @@ const NewsPage = (props) => {
   return (
     <DefaultLayout>
       <div className="section-new">
-      <SectionTop />
-      <SectionAttention />
-      <SectionTrending />
-      <SectionMobile />
-      <SectionComputer />
-      <SectionGames />
-      <SectionCar />
-      <SectionMore />
+        <SectionTop />
+        <SectionAttention />
+        <SectionTrending />
+        <section id="tin-tuc-mobile">
+          <SectionMobile />
+        </section>
+        <section id="tin-tuc-may-tinh">
+          <SectionComputer />
+        </section>
+        <section id="tin-tuc-game">
+          <SectionGames />
+        </section>
+        <section id="tin-tuc-xe">
+          <SectionCar />
+        </section>
+        <SectionMore />
       </div>
     </DefaultLayout>
   );

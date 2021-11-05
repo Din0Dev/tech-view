@@ -21,10 +21,18 @@ const ReviewAllPage = (props) => {
     <DefaultLayout>
       <div className="review-all-page">
         <SectionTop />
-        <SectionMobileTablet />
-        <SectionComputer />
-        <SectionCarHeadPhone />
-        <SectionMore />
+        <section id="danh-gia-dien-thoai-mtb">
+          <SectionMobileTablet />
+        </section>
+        <section id="danh-gia-laptop-pc">
+          <SectionComputer />
+        </section>
+        <section id="danh-gia-xe-tn">
+          <SectionCarHeadPhone />
+        </section>
+        <section id="danh-gia-them">
+          <SectionMore />
+        </section>
       </div>
     </DefaultLayout>
   );

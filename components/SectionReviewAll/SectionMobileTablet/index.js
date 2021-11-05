@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import { Col, Row } from "antd";
 import CardItemReview from "components/CardItemReview";
+import { randomDate } from "../../../utils/randomDate";
+import { randomRate } from "../../../utils/randomRate";
 
 const propTypes = {};
 
@@ -14,8 +16,8 @@ const SectionMobileTablet = (props) => {
       id: 1,
       isRate: true,
       isAuthor: true,
-      rate: 5,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Đánh giá iPhone 13 Pro của Apple: Tốt nhất trong số những điều tốt nhất",
       imgSrc: "/static/assets/img/review-all/mobile_2.png",
@@ -24,8 +26,8 @@ const SectionMobileTablet = (props) => {
       id: 2,
       isRate: true,
       isAuthor: true,
-      rate: 5,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title: "Đánh giá Samsung Galaxy S21 5G: Đúng công thức, sai thành phần",
       imgSrc: "/static/assets/img/review-all/mobile_3.png",
     },
@@ -33,8 +35,8 @@ const SectionMobileTablet = (props) => {
       id: 3,
       isRate: true,
       isAuthor: true,
-      rate: 3,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Đánh giá OnePlus 9 Pro: Điện thoại thông minh đáng tin cậy nhất bạn có thể mua",
       imgSrc: "/static/assets/img/review-all/mobile_4.png",
@@ -43,8 +45,8 @@ const SectionMobileTablet = (props) => {
       id: 4,
       isRate: true,
       isAuthor: true,
-      rate: 4,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Đánh giá Samsung Galaxy Z Flip 3: Tương lai có thể gập lại đã sẵn sàng cho tất cả mọi người",
       imgSrc: "/static/assets/img/review-all/mobile_5.png",
@@ -55,8 +57,8 @@ const SectionMobileTablet = (props) => {
       id: 1,
       isRate: true,
       isAuthor: true,
-      rate: 5,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title:
         "Đánh giá Apple iPad Pro 12,9 inch (2021): Nhiều hơn bạn cần, chính xác những gì bạn muốn",
       imgSrc: "/static/assets/img/review-all/tablet_2.png",
@@ -65,8 +67,8 @@ const SectionMobileTablet = (props) => {
       id: 2,
       isRate: true,
       isAuthor: true,
-      rate: 5,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title: "Đánh giá Lenovo Tab P11 Pro: Phần cứng tuyệt vời ",
       imgSrc: "/static/assets/img/review-all/tablet_3.png",
     },
@@ -74,8 +76,8 @@ const SectionMobileTablet = (props) => {
       id: 3,
       isRate: true,
       isAuthor: true,
-      rate: 3,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title: "Đánh giá Apple iPad Air (2020): iPad Pro giá bình dân",
       imgSrc: "/static/assets/img/review-all/tablet_4.png",
     },
@@ -83,8 +85,8 @@ const SectionMobileTablet = (props) => {
       id: 4,
       isRate: true,
       isAuthor: true,
-      rate: 4,
-      author: "By NamDo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
       title: "Đánh giá Apple Pencil 2: Lựa chọn mới của mọi người",
       imgSrc: "/static/assets/img/review-all/tablet_5.png",
     },

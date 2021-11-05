@@ -2,6 +2,8 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import CardItemNews from "components/CardItemNews";
+import { randomDate } from "utils/randomDate";
+import { randomRate } from "../../../utils/randomRate";
 
 const propTypes = {};
 
@@ -18,8 +20,8 @@ const SectionMobile = (props) => {
       imgSrc: "/static/assets/img/tin-tuc-mobile/mobile_4.png",
       isAuthor: true,
       isRate: true,
-      rate: 4,
-      author: "By Namdo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
     },
     {
       id: 2,
@@ -27,8 +29,8 @@ const SectionMobile = (props) => {
       imgSrc: "/static/assets/img/tin-tuc-mobile/mobile_5.png",
       isAuthor: true,
       isRate: true,
-      rate: 3,
-      author: "By Namdo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
     },
     {
       id: 3,
@@ -37,8 +39,8 @@ const SectionMobile = (props) => {
       imgSrc: "/static/assets/img/tin-tuc-mobile/mobile_6.png",
       isAuthor: true,
       isRate: true,
-      rate: 5,
-      author: "By Namdo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
     },
   ];
   const listItemRight = [
@@ -50,8 +52,8 @@ const SectionMobile = (props) => {
 
       isAuthor: true,
       isRate: true,
-      rate: 2,
-      author: "By Namdo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
     },
     {
       id: 2,
@@ -60,8 +62,8 @@ const SectionMobile = (props) => {
       imgSrc: "/static/assets/img/tin-tuc-mobile/mobile_8.png",
       isAuthor: true,
       isRate: true,
-      rate: 4,
-      author: "By Namdo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
     },
     {
       id: 3,
@@ -69,8 +71,8 @@ const SectionMobile = (props) => {
       imgSrc: "/static/assets/img/tin-tuc-mobile/mobile_9.png",
       isAuthor: true,
       isRate: true,
-      rate: 5,
-      author: "By Namdo",
+      rate: randomRate(),
+      author: `By Namdo - ${randomDate()}`,
     },
   ];
 
